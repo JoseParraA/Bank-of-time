@@ -9,10 +9,33 @@
   </head>
 
   <body>
-  
+    <header>
+    <div class="nav">
+      <h1><a href="/">Bank of Time</a></h1>
+      <nav>
+        <div class="main_nav">
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Transaction Record', transaction_records_path %></li>
+          </ul>
+        </div><!-- END main_nav DIV -->
+        <div class="signup_nav">
+          <ul>
+          <li>
+            <% if @current_user.present?%>
+              <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete', :class => 'small-signin' %>
+            <% else %>
+          </li>
+            <li><%= link_to 'Sign up', new_user_path %></li>
+            <li><%= link_to 'Log in', login_path %></li>
+            <% end %>
+          </ul>
+        </div><!-- END signup_nav DIV -->
+      </nav><!-- END nav -->
+    </header><!-- END header -->
 
-
-    <%= yield %>
-
+    <div>
+        <%= yield %>
+    </div>
   </body>
 </html>
