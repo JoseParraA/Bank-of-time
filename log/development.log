@@ -2772,3 +2772,416 @@ Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
 ActiveRecord::AssociationTypeMismatch (User(#70331041048220) expected, got "" which is an instance of String(#70331029421880)):
   
 app/controllers/transaction_records_controller.rb:27:in `create'
+Started GET "/" for 127.0.0.1 at 2018-05-18 12:13:04 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 242ms (Views: 231.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 12:13:09 +1000
+Processing by TransactionRecordsController#index as HTML
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.9ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 87ms (Views: 58.8ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 12:13:14 +1000
+Processing by TransactionRecordsController#new as HTML
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (28.3ms)
+  Rendered transaction_records/new.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:13:29 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rtv59km5bU5DBG55eJAx+sbTOdcigt9CAM152ChRBxbWMHRL3Hhm+DBZwyPjQ60BOTgZ2oUAzv3yL5VsDd4BGg==", "transaction_record"=>{"provider"=>"1", "reciver"=>"2", "credit"=>"2", "review"=>"4", "comments"=>"12"}, "commit"=>"Create Transaction record"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70325063152700) expected, got "1" which is an instance of String(#70325052538640)):
+  
+app/controllers/transaction_records_controller.rb:27:in `create'
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:16:45 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t6lF2bVQd0b7hQ0YaWQn59ThkKbMf+Q+AEVHXI5GROXLsg5GT6FbltLRuY/+9BWfdemygRHs2pTgCQ/iJXI0Vw==", "transaction_record"=>{"provider"=>"1", "reciver"=>"2", "credit"=>"2", "review"=>"4", "comments"=>"12"}, "commit"=>"Create Transaction record"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 6.8ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70325062172980) expected, got "1" which is an instance of String(#70325052538640)):
+  
+app/controllers/transaction_records_controller.rb:29:in `create'
+Started PUT "/__web_console/repl_sessions/cb9f5b29d832b2928162ab57d6fc9789" for 127.0.0.1 at 2018-05-18 12:17:20 +1000
+Started PUT "/__web_console/repl_sessions/cb9f5b29d832b2928162ab57d6fc9789" for 127.0.0.1 at 2018-05-18 12:17:21 +1000
+Started PUT "/__web_console/repl_sessions/cb9f5b29d832b2928162ab57d6fc9789" for 127.0.0.1 at 2018-05-18 12:17:48 +1000
+Started PUT "/__web_console/repl_sessions/cb9f5b29d832b2928162ab57d6fc9789" for 127.0.0.1 at 2018-05-18 12:17:51 +1000
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:22:26 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t6lF2bVQd0b7hQ0YaWQn59ThkKbMf+Q+AEVHXI5GROXLsg5GT6FbltLRuY/+9BWfdemygRHs2pTgCQ/iJXI0Vw==", "transaction_record"=>{"provider"=>"1", "reciver"=>"2", "credit"=>"2", "review"=>"4", "comments"=>"12"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (5.7ms)
+  Rendered transaction_records/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 77ms (Views: 51.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:22:38 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzAkfhAyNIpk2CBw/eUaVGl1vCQQkji3yRVjJoxta2RHK2/h6sMYWk2MlOdqdSgsyH2eA80BBh0pWSuYJ1kb1g==", "transaction_record"=>{"provider"=>"2", "reciver"=>"5", "credit"=>"2", "review"=>"4", "comments"=>"12"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (5.9ms)
+  Rendered transaction_records/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 60ms (Views: 54.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 12:24:12 +1000
+Processing by TransactionRecordsController#index as HTML
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.6ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 51ms (Views: 38.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 12:24:14 +1000
+Processing by TransactionRecordsController#new as HTML
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.8ms)
+  Rendered transaction_records/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:24:24 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6F5JgYY+rbwMhWu/sMysycq/l1PkmYDAvO9cc6XiWbx4tcQ8E/+mCn/YxuUrHzAyNVS3XkMbkX9ODbDHgG1fsA==", "transaction_record"=>{"provider"=>"4", "reciver"=>"2", "credit"=>"2", "review"=>"3", "comments"=>"1212"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transaction_records" ("credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["credit", 2], ["review", 3], ["comments", "1212"], ["created_at", "2018-05-18 02:24:24.397382"], ["updated_at", "2018-05-18 02:24:24.397382"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/transaction_records/7
+Completed 302 Found in 12ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/transaction_records/7" for 127.0.0.1 at 2018-05-18 12:24:24 +1000
+Processing by TransactionRecordsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" WHERE "transaction_records"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/show.html.erb within layouts/application
+  Rendered transaction_records/show.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<TransactionRecord:0x00007feba8579270>):
+    2: 
+    3: <p>
+    4:   <strong>User:</strong>
+    5:   <%= @transaction_record.user_id %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/transaction_records/show.html.erb:5:in `_app_views_transaction_records_show_html_erb___3686362061624670662_70325059161280'
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:25:27 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"//h/TIur9PpzmIzq6T0vF7cGEu+PX8WTc4GramlDeKKD4zTTcVrYKlrMOH1+rR1vFg4wyFLM+zmTzePUwncIEA==", "transaction_record"=>{"provider"=>"4", "reciver"=>"2", "credit"=>"2", "review"=>"3", "comments"=>"1212"}, "commit"=>"Create Transaction record"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70325116085940) expected, got "4" which is an instance of String(#70325052538640)):
+  
+app/controllers/transaction_records_controller.rb:29:in `create'
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:29:12 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"//h/TIur9PpzmIzq6T0vF7cGEu+PX8WTc4GramlDeKKD4zTTcVrYKlrMOH1+rR1vFg4wyFLM+zmTzePUwncIEA==", "transaction_record"=>{"provider"=>"4", "reciver"=>"2", "credit"=>"2", "review"=>"3", "comments"=>"1212"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transaction_records" ("credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["credit", 2], ["review", 3], ["comments", "1212"], ["created_at", "2018-05-18 02:29:12.494487"], ["updated_at", "2018-05-18 02:29:12.494487"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/transaction_records/8
+Completed 302 Found in 24ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/transaction_records/8" for 127.0.0.1 at 2018-05-18 12:29:12 +1000
+Processing by TransactionRecordsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTransactionRecord Load (0.3ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" WHERE "transaction_records"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering transaction_records/show.html.erb within layouts/application
+  Rendered transaction_records/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<TransactionRecord:0x00007feba8d36800>):
+    2: 
+    3: <p>
+    4:   <strong>User:</strong>
+    5:   <%= @transaction_record.user_id %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/transaction_records/show.html.erb:5:in `_app_views_transaction_records_show_html_erb___3686362061624670662_70325063231420'
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:29:59 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"//h/TIur9PpzmIzq6T0vF7cGEu+PX8WTc4GramlDeKKD4zTTcVrYKlrMOH1+rR1vFg4wyFLM+zmTzePUwncIEA==", "transaction_record"=>{"provider"=>"4", "reciver"=>"2", "credit"=>"2", "review"=>"3", "comments"=>"1212"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.4ms)
+  Rendered transaction_records/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 55ms (Views: 32.1ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:34:14 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"//h/TIur9PpzmIzq6T0vF7cGEu+PX8WTc4GramlDeKKD4zTTcVrYKlrMOH1+rR1vFg4wyFLM+zmTzePUwncIEA==", "transaction_record"=>{"provider"=>"4", "reciver"=>"2", "credit"=>"2", "review"=>"3", "comments"=>"1212"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.0ms)
+  Rendered transaction_records/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 43ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:36:08 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"//h/TIur9PpzmIzq6T0vF7cGEu+PX8WTc4GramlDeKKD4zTTcVrYKlrMOH1+rR1vFg4wyFLM+zmTzePUwncIEA==", "transaction_record"=>{"provider"=>"4", "reciver"=>"2", "credit"=>"2", "review"=>"3", "comments"=>"1212"}, "commit"=>"Create Transaction record"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ():
+  
+app/controllers/transaction_records_controller.rb:29:in `create'
+Started PUT "/__web_console/repl_sessions/750445d2755ce6f7cf2cd012450f89cd" for 127.0.0.1 at 2018-05-18 12:36:12 +1000
+Started PUT "/__web_console/repl_sessions/750445d2755ce6f7cf2cd012450f89cd" for 127.0.0.1 at 2018-05-18 12:36:13 +1000
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 12:39:57 +1000
+Processing by TransactionRecordsController#new as HTML
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.0ms)
+  Rendered transaction_records/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:40:07 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke2yaJsTatZivStcwxh/kIyHgSan41B3F9IODa6cMc5V9vn3YeJGBkvpn8tUiE3oLY+jAXpwbt33nkazBahBfA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"4", "comments"=>"1w"}, "commit"=>"Create Transaction record"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ():
+  
+app/controllers/transaction_records_controller.rb:29:in `create'
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:40:23 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke2yaJsTatZivStcwxh/kIyHgSan41B3F9IODa6cMc5V9vn3YeJGBkvpn8tUiE3oLY+jAXpwbt33nkazBahBfA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"4", "comments"=>"1w"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.4ms)
+  Rendered transaction_records/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 50ms (Views: 32.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:40:39 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke2yaJsTatZivStcwxh/kIyHgSan41B3F9IODa6cMc5V9vn3YeJGBkvpn8tUiE3oLY+jAXpwbt33nkazBahBfA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"4", "comments"=>"1w"}, "commit"=>"Create Transaction record"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70325110290600) expected, got "2" which is an instance of String(#70325052538640)):
+  
+app/controllers/transaction_records_controller.rb:31:in `create'
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:40:54 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke2yaJsTatZivStcwxh/kIyHgSan41B3F9IODa6cMc5V9vn3YeJGBkvpn8tUiE3oLY+jAXpwbt33nkazBahBfA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"4", "comments"=>"1w"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.5ms)
+  Rendered transaction_records/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 49ms (Views: 32.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:43:54 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke2yaJsTatZivStcwxh/kIyHgSan41B3F9IODa6cMc5V9vn3YeJGBkvpn8tUiE3oLY+jAXpwbt33nkazBahBfA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"4", "comments"=>"1w"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.7ms)
+  Rendered transaction_records/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:44:18 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke2yaJsTatZivStcwxh/kIyHgSan41B3F9IODa6cMc5V9vn3YeJGBkvpn8tUiE3oLY+jAXpwbt33nkazBahBfA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"4", "comments"=>"1w"}, "commit"=>"Create Transaction record"}
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 5.2ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70325126278340) expected, got "2" which is an instance of String(#70325052538640)):
+  
+app/controllers/transaction_records_controller.rb:31:in `create'
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:45:02 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke2yaJsTatZivStcwxh/kIyHgSan41B3F9IODa6cMc5V9vn3YeJGBkvpn8tUiE3oLY+jAXpwbt33nkazBahBfA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"4", "comments"=>"1w"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (4.4ms)
+  Rendered transaction_records/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 54ms (Views: 35.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 12:45:07 +1000
+Processing by TransactionRecordsController#index as HTML
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.3ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 12:45:09 +1000
+Processing by TransactionRecordsController#new as HTML
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.0ms)
+  Rendered transaction_records/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:45:20 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UffIBwbd5vIuk6brSwBdd+EpKqO3VY/4VCZWbYGrqlDBHEW6kxztRF3OC7HQ08GMHsIKrhDXnkemxLrZpCSsXA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"1", "comments"=>"1212"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (4.6ms)
+  Rendered transaction_records/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:45:52 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CFHyVL+z/RaEc8bmT+XvrXMoHR803yfV7UGrpvpYiuZ0SrnLRULRxq0ncnHYdd3V0iA/OOlMGX8NDeMYUWz6VA==", "transaction_record"=>{"provider"=>"2", "reciver"=>"3", "credit"=>"1", "review"=>"1", "comments"=>"1212"}, "commit"=>"Create Transaction record"}
+Unpermitted parameters: :provider, :reciver
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (3.6ms)
+  Rendered transaction_records/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 12:46:56 +1000
+Processing by TransactionRecordsController#index as HTML
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 12:46:57 +1000
+Processing by TransactionRecordsController#index as HTML
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 12:46:59 +1000
+Processing by TransactionRecordsController#new as HTML
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (2.9ms)
+  Rendered transaction_records/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:47:09 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lISyg93sowv7wlfen+S05NK46oLxzuxIrbU4Lu8VfqEEbz8+SC2ovYif+oQENygfLVPKj1ZM/fdfV9Saypp4rQ==", "transaction_record"=>{"provider_id"=>"1", "reciver_id"=>"2", "credit"=>"4", "review"=>"1", "comments"=>"asasas"}, "commit"=>"Create Transaction record"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 4], ["review", 1], ["comments", "asasas"], ["created_at", "2018-05-18 02:47:09.643435"], ["updated_at", "2018-05-18 02:47:09.643435"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/transaction_records/9
+Completed 302 Found in 37ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/transaction_records/9" for 127.0.0.1 at 2018-05-18 12:47:09 +1000
+Processing by TransactionRecordsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTransactionRecord Load (0.3ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" WHERE "transaction_records"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering transaction_records/show.html.erb within layouts/application
+  Rendered transaction_records/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<TransactionRecord:0x00007febae650080>):
+    2: 
+    3: <p>
+    4:   <strong>User:</strong>
+    5:   <%= @transaction_record.user_id %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/transaction_records/show.html.erb:5:in `_app_views_transaction_records_show_html_erb___3686362061624670662_70325109913020'
+Started GET "/transaction_records/9" for 127.0.0.1 at 2018-05-18 12:48:26 +1000
+Processing by TransactionRecordsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTransactionRecord Load (0.3ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" WHERE "transaction_records"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering transaction_records/show.html.erb within layouts/application
+  Rendered transaction_records/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
