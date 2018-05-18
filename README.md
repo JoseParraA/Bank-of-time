@@ -9,6 +9,7 @@ This project is part of the Web Developer immersive in General Assembly in Sydne
 * Ruby 2.4.1p111
 * Rails 5.1.6
 * HTML _ JavaScript
+* CSS
 * jQuery
 * Heroku
 * Cloudinary

@@ -27,12 +27,12 @@
 
   <div class="field">
     <%= form.label :credit %>
-    <%= form.number_field :credit, id: :transaction_record_credit %>
+    <%= form.number_field :credit, min: 1, id: :transaction_record_credit %>
   </div>
 
   <div class="field">
     <%= form.label :review %>
-    <%= form.number_field :review, id: :transaction_record_review %>
+    <%= form.number_field :review, min: 1, max: 5, id: :transaction_record_review %>
   </div>
 
   <div class="field">
