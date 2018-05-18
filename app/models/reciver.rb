@@ -1,0 +1,3 @@
+class Reciver < User
+
+end

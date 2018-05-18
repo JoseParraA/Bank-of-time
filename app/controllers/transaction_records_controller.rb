@@ -24,7 +24,11 @@ class TransactionRecordsController < ApplicationController
   # POST /transaction_records
   # POST /transaction_records.json
   def create
-    @transaction_record = TransactionRecord.new(transaction_record_params)
+    # @transaction_record = TransactionRecord.new(transaction_record_params)
+    # job = Job.create job_params
+    # raise
+
+    @transaction_record = TransactionRecord.create transaction_record_params
 
     respond_to do |format|
       if @transaction_record.save
@@ -69,6 +73,6 @@ class TransactionRecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transaction_record_params
-      params.require(:transaction_record).permit(:provider, :reciver, :credit, :review, :comments)
+      params.require(:transaction_record).permit(:provider_id, :reciver_id, :credit, :review, :comments)
     end
 end
