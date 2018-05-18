@@ -8,12 +8,12 @@
 
 
 User.destroy_all
-u1 = User.create(:name => 'Jose P', :email => '100@abc.com', :password => 'chicken',:credit => 2, :suburb => 'Maroubra', :skill => 'Spanish lessons')
-u2 = User.create(:name => 'Sam C', :email => '200@abc.com', :password => 'chicken',:credit => 2, :suburb => 'Glebe', :skill => 'IT')
-u3 = User.create(:name => 'Morgan G ', :email => '300@abc.com', :password => 'chicken',:credit => 2, :suburb => 'Surry Hills', :skill => 'Plumber')
-u4 = User.create(:name => 'Sally Jones', :email => '400@abc.com', :password => 'chicken',:credit => 2, :suburb => 'Randwick', :skill => 'Gardering')
-u5 = User.create(:name => 'Megan Long', :email => '500@abc.com', :password => 'chicken',:credit => 2, :suburb => 'Bondi Juction', :skill => 'Guitar lessons')
-u6 = User.create(:name => 'Tom Shaws', :email => '600@abc.com', :password => 'chicken',:credit => 2, :suburb => 'Kingsford', :skill => 'Cooking')
+u1 = User.create(:name => 'Jose P', :email => '100@abc.com', :password => 'chicken',:credit => 2, :address => '4 Broome street 2035 Maroubra', :skill => 'Spanish lessons')
+u2 = User.create(:name => 'Sam C', :email => '200@abc.com', :password => 'chicken',:credit => 2, :address => '212 Bridge Rd, Glebe NSW 2037', :skill => 'IT')
+u3 = User.create(:name => 'Morgan G ', :email => '300@abc.com', :password => 'chicken',:credit => 2, :address => '56-58 York Street, Level M, Sydney NSW 2000', :skill => 'Plumber')
+u4 = User.create(:name => 'Sally Jones', :email => '400@abc.com', :password => 'chicken',:credit => 2, :address => '56/58 Beach Road, Bondi Beach NSW 2026', :skill => 'Gardering')
+u5 = User.create(:name => 'Megan Long', :email => '500@abc.com', :password => 'chicken',:credit => 2, :address => '11 Patterson Street, Double Bay NSW 2028', :skill => 'Guitar lessons')
+u6 = User.create(:name => 'Tom Shaws', :email => '600@abc.com', :password => 'chicken',:credit => 2, :address => '67 Frenchmans Rd, Randwick NSW 2031', :skill => 'Cooking')
 
 
 TransactionRecord.destroy_all

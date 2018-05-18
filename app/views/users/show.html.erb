@@ -17,7 +17,7 @@
 
 <p>
   <strong>Suburb:</strong>
-  <%= @user.suburb %>
+  <%= @user.address %>
 </p>
 
 <p>
@@ -40,5 +40,8 @@
   <%= @user.latitude %>
 </p>
 
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@user.latitude}%2C#{@user.longitude}" %>

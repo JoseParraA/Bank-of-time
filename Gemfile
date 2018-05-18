@@ -46,6 +46,7 @@ group :development, :test do
   gem 'annotate'
   gem 'jquery-rails'
   gem 'bootstrap-sass'
+  gem 'geocoder'
 end
 
 group :development do

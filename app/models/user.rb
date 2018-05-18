@@ -5,4 +5,8 @@ class User < ApplicationRecord
 
   validates :email, :presence => true, :uniqueness => true
 
+  geocoded_by :address   #using geocoder to convert location into coordinates
+  after_validation :geocode   # auto-fetch coordinates
+
+  
 end

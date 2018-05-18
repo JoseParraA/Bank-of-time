@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180517002723) do
     t.text "email"
     t.integer "credit"
     t.string "password_digest"
-    t.text "suburb"
+    t.string "address"
     t.text "skill"
     t.string "image"
     t.float "longitude"
