@@ -17,8 +17,8 @@
   <tbody>
     <% @transaction_records.each do |transaction_record| %>
       <tr>
-        <td><%= transaction_record.user_id %></td>
-        <td><%= transaction_record.user_id %></td>
+        <td><%= transaction_record.provider_id %></td>
+        <td><%= transaction_record.reciver_id %></td>
         <td><%= transaction_record.credit %></td>
         <td><%= transaction_record.review %></td>
         <td><%= transaction_record.comments %></td>

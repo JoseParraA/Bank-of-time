@@ -2362,3 +2362,413 @@ Migrating to CreateTransactionRecords (20180517002723)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" ORDER BY "transaction_records"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (175.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Bank_of_Time_development"[0m
+  [1m[35m (247.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Bank_of_Time_test"[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4036996959496302060)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180517001147)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" text, "email" text, "credit" integer, "password_digest" character varying, "suburb" text, "skill" text, "image" character varying, "longitude" float, "latitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517001147"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactionRecords (20180517002723)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "transaction_records" ("id" bigserial primary key, "provider_id" integer, "reciver_id" integer, "credit" integer, "review" integer, "comments" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517002723"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-18 01:39:02.627721"], ["updated_at", "2018-05-18 01:39:02.627721"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4036996959496302060)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "100@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jose P"], ["email", "100@abc.com"], ["credit", 2], ["password_digest", "$2a$10$tjIVHFLNKycYHOfLQ4GNhuVD3dfYCaa79Xjer59DzFWj3WSOYbM66"], ["suburb", "Maroubra"], ["skill", "Spanish lessons"], ["created_at", "2018-05-18 01:39:16.395514"], ["updated_at", "2018-05-18 01:39:16.395514"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "200@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sam C"], ["email", "200@abc.com"], ["credit", 2], ["password_digest", "$2a$10$vJOUrn.RWT4PqyzP0.69iOUYUtBz/vYlZ8b9.kaHzzj6ZzIBlfJRu"], ["suburb", "Glebe"], ["skill", "IT"], ["created_at", "2018-05-18 01:39:16.467315"], ["updated_at", "2018-05-18 01:39:16.467315"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "300@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Morgan G "], ["email", "300@abc.com"], ["credit", 2], ["password_digest", "$2a$10$H0U0PibNcqg/ewuKqOd9GOMzeRqpt.Fh9Z6YWIUG4VS2gVk5VxA3a"], ["suburb", "Surry Hills"], ["skill", "Plumber"], ["created_at", "2018-05-18 01:39:16.538001"], ["updated_at", "2018-05-18 01:39:16.538001"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "400@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sally Jones"], ["email", "400@abc.com"], ["credit", 2], ["password_digest", "$2a$10$fDRkqtl6IsHZarO7.Nbayub9qbvJKZyKjALXVCjFDuvdrD/bWH5xC"], ["suburb", "Randwick"], ["skill", "Gardering"], ["created_at", "2018-05-18 01:39:16.608816"], ["updated_at", "2018-05-18 01:39:16.608816"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "500@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Megan Long"], ["email", "500@abc.com"], ["credit", 2], ["password_digest", "$2a$10$UzCV7Az6JRC5eFcIiFj7auSSTy3eqoDXwvBwXA9iqNM9xykc9SplS"], ["suburb", "Bondi Juction"], ["skill", "Guitar lessons"], ["created_at", "2018-05-18 01:39:16.683850"], ["updated_at", "2018-05-18 01:39:16.683850"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "600@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tom Shaws"], ["email", "600@abc.com"], ["credit", 2], ["password_digest", "$2a$10$1PLf/C7N9TnO6KuH4rLTTOJM0y5V1aWBb.OxgCyio6NZPcgRJLwuu"], ["suburb", "Kingsford"], ["skill", "Cooking"], ["created_at", "2018-05-18 01:39:16.754323"], ["updated_at", "2018-05-18 01:39:16.754323"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransactionRecord Load (0.7ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 5], ["comments", "Good"], ["created_at", "2018-05-18 01:39:16.780277"], ["updated_at", "2018-05-18 01:39:16.780277"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 4], ["comments", "Good"], ["created_at", "2018-05-18 01:39:16.784667"], ["updated_at", "2018-05-18 01:39:16.784667"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 3], ["comments", "Good"], ["created_at", "2018-05-18 01:39:16.788655"], ["updated_at", "2018-05-18 01:39:16.788655"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 5], ["comments", "Good"], ["created_at", "2018-05-18 01:39:16.792604"], ["updated_at", "2018-05-18 01:39:16.792604"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 4], ["comments", "Good"], ["created_at", "2018-05-18 01:39:16.796676"], ["updated_at", "2018-05-18 01:39:16.796676"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 1], ["comments", "Good"], ["created_at", "2018-05-18 01:39:16.800514"], ["updated_at", "2018-05-18 01:39:16.800514"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-05-18 11:39:45 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 352ms (Views: 309.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 11:39:48 +1000
+Processing by TransactionRecordsController#index as HTML
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (1.0ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (52.6ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 21.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<TransactionRecord:0x007fee70bee2c0>):
+    17:   <tbody>
+    18:     <% @transaction_records.each do |transaction_record| %>
+    19:       <tr>
+    20:         <td><%= transaction_record.user_id %></td>
+    21:         <td><%= transaction_record.user_id %></td>
+    22:         <td><%= transaction_record.credit %></td>
+    23:         <td><%= transaction_record.review %></td>
+  
+app/views/transaction_records/index.html.erb:20:in `block in _app_views_transaction_records_index_html_erb___2553558307298136168_70331079777220'
+app/views/transaction_records/index.html.erb:18:in `_app_views_transaction_records_index_html_erb___2553558307298136168_70331079777220'
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 11:41:16 +1000
+Processing by TransactionRecordsController#index as HTML
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 11:41:23 +1000
+Processing by TransactionRecordsController#index as HTML
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (3.9ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 51ms (Views: 41.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:41:30 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 11:41:39 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZiL/+GHG7QYtZJGN8O/UlF2f05uGF9F3FvpuKMj91cOaFCp/eu84A45TfS9Ry83wgWF/jSLhppkyttAvxfhXA==", "email"=>"test@test.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:41:39 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 11:41:50 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqoxO+7j3nH6EfA+pze6TrhllLe4+jlPGT+z23W8Rx29hfnYDdcHadysDH+c61QjB4WK/4CWKMKR4xevQ8XcYA==", "email"=>"test@test.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:41:50 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 11:42:00 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5I7T1Xr623TZj8K4dDX5hLhm5plKkDWxfadjCW1FbdVjoRs2mc4CbP8yPvlP6RfpB4b40XL8JDz1e8d9Wzz2qA==", "email"=>"test@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:42:00 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 11:42:03 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (18.5ms)
+  Rendered users/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 125ms (Views: 88.0ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:42:33 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+SB/gjq/EN8hWipukCWf+L/2K95WzV3X+a8NuCFEMTXbEc89nCmeYdiUK7u+y9eDlcxnEaG5wW+WvBy2aZo+TQ==", "user"=>{"name"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "suburb"=>"j", "skill"=>"j", "image"=>"j"}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "suburb", "skill", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "test"], ["email", "test@test.com"], ["password_digest", "$2a$10$FujFFTYMQLBAJ7mx3C2lA.Dr9TcLxBC/dZP8RYvH.dPeVNoc2fPKW"], ["suburb", "j"], ["skill", "j"], ["image", "j"], ["created_at", "2018-05-18 01:42:33.219211"], ["updated_at", "2018-05-18 01:42:33.219211"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 87ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-05-18 11:42:33 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:42:45 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 60ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 11:42:51 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KxPsROGG3lK3uenghvVH5CF78pjDYOlAotkTQJl80sZc4zcS/ep5BqE1NlIMcdeBsggIKJnzMJ8aSCG4hUjEzQ==", "email"=>"test@test.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 11:42:51 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 11:42:53 +1000
+Processing by TransactionRecordsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (5.7ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 66ms (Views: 53.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 11:43:03 +1000
+Processing by TransactionRecordsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-18 11:43:07 +1000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 11:45:35 +1000
+Processing by TransactionRecordsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.7ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 11:45:36 +1000
+Processing by TransactionRecordsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (24.6ms)
+  Rendered transaction_records/new.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 84ms (Views: 77.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:45:46 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6SIah3uQ8v9JgnpfPILfEic2AqDTzWD2ZODcllVLj6WyXJF6rE+L4GHj+b13F1WC+CLdDSLrNu6W/CTK6rCqnw==", "transaction_record"=>{"provider"=>"1", "reciver"=>"2", "credit"=>"4", "review"=>"1", "comments"=>"d"}, "commit"=>"Create Transaction record"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70331041048220) expected, got "1" which is an instance of String(#70331029421880)):
+  
+app/controllers/transaction_records_controller.rb:27:in `create'
+Started PUT "/__web_console/repl_sessions/ccb06fae741f2a472b83d5b2ea6963fb" for 127.0.0.1 at 2018-05-18 11:46:22 +1000
+Started PUT "/__web_console/repl_sessions/ccb06fae741f2a472b83d5b2ea6963fb" for 127.0.0.1 at 2018-05-18 11:46:39 +1000
+Started GET "/users" for 127.0.0.1 at 2018-05-18 11:48:09 +1000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 37.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 11:48:24 +1000
+Processing by TransactionRecordsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.7ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 55ms (Views: 46.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 11:48:25 +1000
+Processing by TransactionRecordsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (7.5ms)
+  Rendered transaction_records/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 98ms (Views: 91.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:48:43 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zjQLZklrRP0SAq6+gWe7ObqAIjD+IKgSiyagHKch+MCVSoCbnrQ94jpjLVzK8jGpZZT9nQ8G/gp5OlhAGNrd+g==", "transaction_record"=>{"provider"=>"7", "reciver"=>"3", "credit"=>"1", "review"=>"3", "comments"=>"d"}, "commit"=>"Create Transaction record"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70331041048220) expected, got "7" which is an instance of String(#70331029421880)):
+  
+app/controllers/transaction_records_controller.rb:27:in `create'
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:48:51 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q2xZn39K+PjKoBNT3BRXLWzcxeyrNNHWq5hJ6k5LpR0sQ5F8nH4h4Owd7xLnyLlA0zzbpJNYwFsjRO2eeDI+YA==", "transaction_record"=>{"provider"=>"7", "reciver"=>"7", "credit"=>"1", "review"=>"3", "comments"=>"d"}, "commit"=>"Create Transaction record"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70331041048220) expected, got "7" which is an instance of String(#70331029421880)):
+  
+app/controllers/transaction_records_controller.rb:27:in `create'
+Started GET "/users" for 127.0.0.1 at 2018-05-18 11:49:19 +1000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2018-05-18 11:49:40 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 35.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 11:49:53 +1000
+Processing by TransactionRecordsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 47ms (Views: 40.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 11:49:55 +1000
+Processing by TransactionRecordsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (7.3ms)
+  Rendered transaction_records/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 68ms (Views: 61.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:50:05 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j9F/M4hV1unMFWVonjlnB6loMoUewJKADO5NWZTCFPjUr/TOX4qv9uR05orVrO2XdnztKO/mxJj+8rUFKzkxwg==", "transaction_record"=>{"provider"=>"1", "reciver"=>"2", "credit"=>"2", "review"=>"1", "comments"=>"d"}, "commit"=>"Create Transaction record"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70331041048220) expected, got "1" which is an instance of String(#70331029421880)):
+  
+app/controllers/transaction_records_controller.rb:27:in `create'
+Started PUT "/__web_console/repl_sessions/f2ff6d25d621e10c603ac425d31f913d" for 127.0.0.1 at 2018-05-18 12:05:54 +1000
+Started PUT "/__web_console/repl_sessions/f2ff6d25d621e10c603ac425d31f913d" for 127.0.0.1 at 2018-05-18 12:05:54 +1000
+Started PUT "/__web_console/repl_sessions/f2ff6d25d621e10c603ac425d31f913d" for 127.0.0.1 at 2018-05-18 12:05:59 +1000
+Started PUT "/__web_console/repl_sessions/f2ff6d25d621e10c603ac425d31f913d" for 127.0.0.1 at 2018-05-18 12:06:04 +1000
+Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 12:11:01 +1000
+Processing by TransactionRecordsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/index.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  Rendered transaction_records/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 53ms (Views: 46.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 12:11:06 +1000
+Processing by TransactionRecordsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering transaction_records/new.html.erb within layouts/application
+  Rendered transaction_records/_form.html.erb (4.9ms)
+  Rendered transaction_records/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 64ms (Views: 55.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 12:11:07 +1000
+Processing by TransactionRecordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"88jWKAWwhqgGCxU2VY1XR4fNJ7OaQaw0HqRhB5vhjgmotl3V0m//ty5qltQeGN3XWNn4Hmtn+izsuJlbJBqrMw==", "transaction_record"=>{"provider"=>"", "reciver"=>"", "credit"=>"", "review"=>"", "comments"=>""}, "commit"=>"Create Transaction record"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70331041048220) expected, got "" which is an instance of String(#70331029421880)):
+  
+app/controllers/transaction_records_controller.rb:27:in `create'
