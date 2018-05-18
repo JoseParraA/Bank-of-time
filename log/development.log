@@ -1,8 +1,8 @@
 Started GET "/" for 127.0.0.1 at 2018-05-17 11:26:57 +1000
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "Bank_of_Time_development" does not exist
 ):
-  
+
 activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:701:in `rescue in connect'
 activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
 activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
@@ -85,9 +85,9 @@ Completed 200 OK in 27ms (Views: 11.2ms | ActiveRecord: 0.0ms)
 
 Started GET "/" for 127.0.0.1 at 2018-05-17 12:12:23 +1000
   [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
+
 ActionController::RoutingError (uninitialized constant PagesController):
-  
+
 activesupport (5.1.6) lib/active_support/inflector/methods.rb:269:in `const_get'
 activesupport (5.1.6) lib/active_support/inflector/methods.rb:269:in `block in constantize'
 activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `each'
@@ -144,14 +144,14 @@ Processing by PagesController#home as HTML
 Completed 406 Not Acceptable in 76ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (PagesController#home is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.1.6) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
 actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -232,9 +232,9 @@ Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/login" for 127.0.0.1 at 2018-05-17 12:25:37 +1000
-  
+
 ActionController::RoutingError (uninitialized constant SessionController):
-  
+
 activesupport (5.1.6) lib/active_support/inflector/methods.rb:269:in `const_get'
 activesupport (5.1.6) lib/active_support/inflector/methods.rb:269:in `block in constantize'
 activesupport (5.1.6) lib/active_support/inflector/methods.rb:267:in `each'
@@ -303,9 +303,9 @@ Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 3.6ms)
 
 
 Started GET "/bank" for 127.0.0.1 at 2018-05-17 12:27:07 +1000
-  
+
 ActionController::RoutingError (No route matches [GET] "/bank"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -941,9 +941,9 @@ Completed 200 OK in 307ms (Views: 277.7ms | ActiveRecord: 11.6ms)
 
 
 Started GET "/transaction_record" for 127.0.0.1 at 2018-05-17 14:58:28 +1000
-  
+
 ActionController::RoutingError (No route matches [GET] "/transaction_record"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -997,9 +997,9 @@ Completed 200 OK in 73ms (Views: 68.8ms | ActiveRecord: 0.0ms)
 
 Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-17 15:21:14 +1000
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
+
 SyntaxError (/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/controllers/application_controller.rb:11: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/application_controller.rb:11: syntax error, unexpected end-of-input, expecting keyword_end
 app/controllers/transaction_records_controller.rb:1:in `<top (required)>'
 Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-17 15:21:56 +1000
@@ -1198,9 +1198,9 @@ Processing by SessionController#create as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
 
 
-  
+
 BCrypt::Errors::InvalidHash (invalid hash):
-  
+
 app/controllers/session_controller.rb:7:in `create'
 Started POST "/login" for 127.0.0.1 at 2018-05-17 15:40:41 +1000
 Processing by SessionController#create as HTML
@@ -1209,9 +1209,9 @@ Processing by SessionController#create as HTML
 Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.4ms)
 
 
-  
+
 BCrypt::Errors::InvalidHash (invalid hash):
-  
+
 app/controllers/session_controller.rb:7:in `create'
 Started PUT "/__web_console/repl_sessions/5c579b00139c897745b882ea00d11a62" for 127.0.0.1 at 2018-05-17 15:41:22 +1000
 Started PUT "/__web_console/repl_sessions/5c579b00139c897745b882ea00d11a62" for 127.0.0.1 at 2018-05-17 15:41:26 +1000
@@ -1226,9 +1226,9 @@ Processing by SessionController#create as HTML
 Completed 500 Internal Server Error in 27ms (ActiveRecord: 6.7ms)
 
 
-  
+
 BCrypt::Errors::InvalidHash (invalid hash):
-  
+
 app/controllers/session_controller.rb:7:in `create'
 Started POST "/login" for 127.0.0.1 at 2018-05-17 15:50:34 +1000
 Processing by SessionController#create as HTML
@@ -1237,9 +1237,9 @@ Processing by SessionController#create as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
 
 
-  
+
 BCrypt::Errors::InvalidHash (invalid hash):
-  
+
 app/controllers/session_controller.rb:7:in `create'
 Started POST "/login" for 127.0.0.1 at 2018-05-17 15:50:41 +1000
 Processing by SessionController#create as HTML
@@ -1248,9 +1248,9 @@ Processing by SessionController#create as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
 
 
-  
+
 BCrypt::Errors::InvalidHash (invalid hash):
-  
+
 app/controllers/session_controller.rb:7:in `create'
 Started GET "/users/7" for 127.0.0.1 at 2018-05-17 15:50:50 +1000
 Processing by UsersController#show as HTML
@@ -1544,9 +1544,9 @@ Processing by TransactionRecordsController#show as HTML
 Completed 404 Not Found in 60ms (ActiveRecord: 11.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find TransactionRecord with 'id'=2):
-  
+
 app/controllers/transaction_records_controller.rb:67:in `set_transaction_record'
 Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 10:27:17 +1000
 Processing by TransactionRecordsController#index as HTML
@@ -1571,9 +1571,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for TransactionRecord.):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 10:28:13 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -1581,9 +1581,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for TransactionRecord.):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started GET "/transaction_records/new" for 127.0.0.1 at 2018-05-18 10:29:40 +1000
 Processing by TransactionRecordsController#new as HTML
@@ -1622,13 +1622,14 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for TransactionRecord.):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/__web_console/repl_sessions/158555c0264748c0f54800b4df5ed14d/trace" for 127.0.0.1 at 2018-05-18 10:35:24 +1000
 Started PUT "/__web_console/repl_sessions/158555c0264748c0f54800b4df5ed14d" for 127.0.0.1 at 2018-05-18 10:36:02 +1000
 Started PUT "/__web_console/repl_sessions/158555c0264748c0f54800b4df5ed14d" for 127.0.0.1 at 2018-05-18 10:36:03 +1000
+<<<<<<< HEAD
 Started GET "/transaction_records" for 127.0.0.1 at 2018-05-18 10:41:01 +1000
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by TransactionRecordsController#index as HTML
@@ -1652,9 +1653,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for TransactionRecord.):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started PUT "/__web_console/repl_sessions/aaeca206ed2e90eeeb4c3fd705042b84" for 127.0.0.1 at 2018-05-18 10:41:20 +1000
 Started PUT "/__web_console/repl_sessions/aaeca206ed2e90eeeb4c3fd705042b84" for 127.0.0.1 at 2018-05-18 10:41:20 +1000
@@ -1926,9 +1927,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174067429980) expected, got "1" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started PUT "/__web_console/repl_sessions/16476bcf8ac1dbb899a73d45a38d7408" for 127.0.0.1 at 2018-05-18 10:53:30 +1000
 Started PUT "/__web_console/repl_sessions/16476bcf8ac1dbb899a73d45a38d7408" for 127.0.0.1 at 2018-05-18 10:53:31 +1000
@@ -1941,9 +1942,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174067429980) expected, got "2" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 10:57:18 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -1952,9 +1953,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174067429980) expected, got "70174067429980" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 10:58:29 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -1963,9 +1964,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174067429980) expected, got "1" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 10:58:47 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -1974,9 +1975,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174067429980) expected, got "3" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started PUT "/__web_console/repl_sessions/7f2d58bf97bf82ae9e1f7ff74b1382d3" for 127.0.0.1 at 2018-05-18 10:59:03 +1000
 Started PUT "/__web_console/repl_sessions/7f2d58bf97bf82ae9e1f7ff74b1382d3" for 127.0.0.1 at 2018-05-18 10:59:04 +1000
@@ -1993,9 +1994,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 11.8ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174088676480) expected, got "3" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:12:22 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -2004,9 +2005,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174088676480) expected, got "3" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started PUT "/__web_console/repl_sessions/f9ec2d344c411099f73e98c0dc70839e" for 127.0.0.1 at 2018-05-18 11:12:29 +1000
 Started PUT "/__web_console/repl_sessions/f9ec2d344c411099f73e98c0dc70839e" for 127.0.0.1 at 2018-05-18 11:12:31 +1000
@@ -2017,9 +2018,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 42ms (ActiveRecord: 11.8ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174088762620) expected, got "3" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:13:01 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -2028,9 +2029,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174088762620) expected, got "3" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:13:02 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -2039,9 +2040,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174088762620) expected, got "3" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:13:03 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -2050,9 +2051,9 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.9ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174088762620) expected, got "3" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
 Started POST "/transaction_records" for 127.0.0.1 at 2018-05-18 11:16:46 +1000
 Processing by TransactionRecordsController#create as HTML
@@ -2061,7 +2062,303 @@ Processing by TransactionRecordsController#create as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::AssociationTypeMismatch (User(#70174088762620) expected, got "7" which is an instance of String(#70174040817440)):
-  
+
 app/controllers/transaction_records_controller.rb:27:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 10:41:39 +1000
+
+ActiveRecord::NoDatabaseError (FATAL:  database "Bank_of_Time_development" does not exist
+):
+
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:701:in `rescue in connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4036996959496302060)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180517001147)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" text, "email" text, "credit" integer, "password_digest" character varying, "suburb" text, "skill" text, "image" character varying, "longitude" float, "latitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517001147"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactionRecords (20180517002723)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "transaction_records" ("id" bigserial primary key, "provider" integer, "reciver" integer, "credit" integer, "review" integer, "comments" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517002723"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-18 00:42:25.117909"], ["updated_at", "2018-05-18 00:42:25.117909"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4036996959496302060)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "100@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jose P"], ["email", "100@abc.com"], ["credit", 2], ["password_digest", "$2a$10$7w55Wa87cGTLA8nocy3E3uxKteHAollPblzuIcsvaK9AZ5irF0HvC"], ["suburb", "Maroubra"], ["skill", "Spanish lessons"], ["created_at", "2018-05-18 00:42:32.226551"], ["updated_at", "2018-05-18 00:42:32.226551"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "200@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sam C"], ["email", "200@abc.com"], ["credit", 2], ["password_digest", "$2a$10$ICxK1.Ka3n/koiZH4fYqLO9tibHz5rXmfHUKNq.Lz8vj23lUzxpMC"], ["suburb", "Glebe"], ["skill", "IT"], ["created_at", "2018-05-18 00:42:32.297556"], ["updated_at", "2018-05-18 00:42:32.297556"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "300@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Morgan G "], ["email", "300@abc.com"], ["credit", 2], ["password_digest", "$2a$10$Meq5cUcqJ1jBQ8fBTrFaKeXC01pRCQDhAKlFtPDb4f8ML0WWpu3mm"], ["suburb", "Surry Hills"], ["skill", "Plumber"], ["created_at", "2018-05-18 00:42:32.365673"], ["updated_at", "2018-05-18 00:42:32.365673"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "400@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sally Jones"], ["email", "400@abc.com"], ["credit", 2], ["password_digest", "$2a$10$aQm5uqdUCloiF/5Zw7N9/eZxm7gWElXX9FyMEk1RjcP7N3ZZ96wt."], ["suburb", "Randwick"], ["skill", "Gardering"], ["created_at", "2018-05-18 00:42:32.431244"], ["updated_at", "2018-05-18 00:42:32.431244"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "500@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Megan Long"], ["email", "500@abc.com"], ["credit", 2], ["password_digest", "$2a$10$Fh4ztkslqW4B9.5clDzO/eyFlM62LAtEbCiYjF784Zch217mk/AF6"], ["suburb", "Bondi Juction"], ["skill", "Guitar lessons"], ["created_at", "2018-05-18 00:42:32.497238"], ["updated_at", "2018-05-18 00:42:32.497238"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "600@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tom Shaws"], ["email", "600@abc.com"], ["credit", 2], ["password_digest", "$2a$10$q2BK68xBa/uXjfyM2ewScOWNorV766Y85mRLMrfDZzxRrqYr.10Yi"], ["suburb", "Kingsford"], ["skill", "Cooking"], ["created_at", "2018-05-18 00:42:32.565659"], ["updated_at", "2018-05-18 00:42:32.565659"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransactionRecord Load (0.7ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for 127.0.0.1 at 2018-05-18 10:42:55 +1000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 384ms (Views: 372.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "100@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jose P"], ["email", "100@abc.com"], ["credit", 2], ["password_digest", "$2a$10$GQ0jMiWkH17jpPhksY3k/u4v2aeAi0zDwSJPJLtA2fXm.8.a.BbiC"], ["suburb", "Maroubra"], ["skill", "Spanish lessons"], ["created_at", "2018-05-18 01:15:18.008614"], ["updated_at", "2018-05-18 01:15:18.008614"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "200@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sam C"], ["email", "200@abc.com"], ["credit", 2], ["password_digest", "$2a$10$9B5ywcXhdCs3Yji91GA04OPF6ohM8H1SfFHzWoHmftt9D0GXWEg4."], ["suburb", "Glebe"], ["skill", "IT"], ["created_at", "2018-05-18 01:15:18.075751"], ["updated_at", "2018-05-18 01:15:18.075751"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "300@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Morgan G "], ["email", "300@abc.com"], ["credit", 2], ["password_digest", "$2a$10$HxU9Me5cNHlLkU9prlIEkOr8bPAq.qPPAz20YPdEkIWlCXI2SiL3S"], ["suburb", "Surry Hills"], ["skill", "Plumber"], ["created_at", "2018-05-18 01:15:18.142485"], ["updated_at", "2018-05-18 01:15:18.142485"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "400@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sally Jones"], ["email", "400@abc.com"], ["credit", 2], ["password_digest", "$2a$10$o78FMry0LYYNDFQqSqz.eOxBprNhnvK/J/URXJBLS4dpx6O/3kPQW"], ["suburb", "Randwick"], ["skill", "Gardering"], ["created_at", "2018-05-18 01:15:18.200907"], ["updated_at", "2018-05-18 01:15:18.200907"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "500@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Megan Long"], ["email", "500@abc.com"], ["credit", 2], ["password_digest", "$2a$10$ZaiuKV6DAYQd5Ql16W2zcOAKkb2LFWHDDny8lyMtRkeDIgUE.czFC"], ["suburb", "Bondi Juction"], ["skill", "Guitar lessons"], ["created_at", "2018-05-18 01:15:18.259010"], ["updated_at", "2018-05-18 01:15:18.259010"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "600@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tom Shaws"], ["email", "600@abc.com"], ["credit", 2], ["password_digest", "$2a$10$qMASmFtcAFHjLaeLdyX0j.zROBKOUpCdIvo2P6zvaa1mqjAR1Q6HO"], ["suburb", "Kingsford"], ["skill", "Cooking"], ["created_at", "2018-05-18 01:15:18.320620"], ["updated_at", "2018-05-18 01:15:18.320620"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "100@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jose P"], ["email", "100@abc.com"], ["credit", 2], ["password_digest", "$2a$10$9TlmOJ/ZilYLI1jOEvy01ONItRVSwcZHGHWC6313ih/PidINDaLQ6"], ["suburb", "Maroubra"], ["skill", "Spanish lessons"], ["created_at", "2018-05-18 01:18:13.735889"], ["updated_at", "2018-05-18 01:18:13.735889"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "200@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sam C"], ["email", "200@abc.com"], ["credit", 2], ["password_digest", "$2a$10$ygsjHcxbNdYcq8F30Eo08OasSVQCA2d1it/gLiPLvv94jxsBgcOxa"], ["suburb", "Glebe"], ["skill", "IT"], ["created_at", "2018-05-18 01:18:13.803589"], ["updated_at", "2018-05-18 01:18:13.803589"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "300@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Morgan G "], ["email", "300@abc.com"], ["credit", 2], ["password_digest", "$2a$10$rQBLm80SiFX5nnvUEyyLaOaTuiyyrC/ELAwXj1Yq8LxS7XSgumc4C"], ["suburb", "Surry Hills"], ["skill", "Plumber"], ["created_at", "2018-05-18 01:18:13.866819"], ["updated_at", "2018-05-18 01:18:13.866819"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "400@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sally Jones"], ["email", "400@abc.com"], ["credit", 2], ["password_digest", "$2a$10$S9f4IsbkdJxW8.ilg5yt0uX9F119vRAGWABtSviaGlgH/ciUYTLn6"], ["suburb", "Randwick"], ["skill", "Gardering"], ["created_at", "2018-05-18 01:18:13.933320"], ["updated_at", "2018-05-18 01:18:13.933320"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "500@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Megan Long"], ["email", "500@abc.com"], ["credit", 2], ["password_digest", "$2a$10$/wm1QWk8Y.5MKqa.Ne9fNeWaX/Yn8XcfTX49nnaMWa15TdlCGH2Ny"], ["suburb", "Bondi Juction"], ["skill", "Guitar lessons"], ["created_at", "2018-05-18 01:18:13.999106"], ["updated_at", "2018-05-18 01:18:13.999106"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "600@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tom Shaws"], ["email", "600@abc.com"], ["credit", 2], ["password_digest", "$2a$10$8f162XeWNZyQ9Viy4F4Ix.jpj7Ep5zgu1u428qvStC64DMc8TlA0m"], ["suburb", "Kingsford"], ["skill", "Cooking"], ["created_at", "2018-05-18 01:18:14.065534"], ["updated_at", "2018-05-18 01:18:14.065534"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransactionRecord Load (0.6ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (221.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Bank_of_Time_development"[0m
+  [1m[35m (211.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Bank_of_Time_test"[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4036996959496302060)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180517001147)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" text, "email" text, "credit" integer, "password_digest" character varying, "suburb" text, "skill" text, "image" character varying, "longitude" float, "latitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517001147"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactionRecords (20180517002723)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "transaction_records" ("id" bigserial primary key, "provider_id" integer, "reciver_id" integer, "credit" integer, "review" integer, "comments" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517002723"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-18 01:21:08.158025"], ["updated_at", "2018-05-18 01:21:08.158025"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4036996959496302060)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "100@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jose P"], ["email", "100@abc.com"], ["credit", 2], ["password_digest", "$2a$10$C0k.REg.DlaWeBynEn3.3udtlpoqqfBGPfSZPx3/6rYWntnLgRG5W"], ["suburb", "Maroubra"], ["skill", "Spanish lessons"], ["created_at", "2018-05-18 01:21:14.070536"], ["updated_at", "2018-05-18 01:21:14.070536"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "200@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sam C"], ["email", "200@abc.com"], ["credit", 2], ["password_digest", "$2a$10$RGDqwDi9XDxkX1/7GIxmf.2BkLOA9fyJ7qQAtDmOaNiUiIIRnOX5y"], ["suburb", "Glebe"], ["skill", "IT"], ["created_at", "2018-05-18 01:21:14.140671"], ["updated_at", "2018-05-18 01:21:14.140671"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "300@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Morgan G "], ["email", "300@abc.com"], ["credit", 2], ["password_digest", "$2a$10$HmgetKQ4tGE.ZJbXqW3JPey1kwRkyS.oOG9NomfxrK9VBnPaH3EvG"], ["suburb", "Surry Hills"], ["skill", "Plumber"], ["created_at", "2018-05-18 01:21:14.199659"], ["updated_at", "2018-05-18 01:21:14.199659"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "400@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Sally Jones"], ["email", "400@abc.com"], ["credit", 2], ["password_digest", "$2a$10$tbCB9m9TQCvQT7beSHRt7ubgGCc0NQgauzT6AeB09J.ACD2Z7sCZO"], ["suburb", "Randwick"], ["skill", "Gardering"], ["created_at", "2018-05-18 01:21:14.259927"], ["updated_at", "2018-05-18 01:21:14.259927"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "500@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Megan Long"], ["email", "500@abc.com"], ["credit", 2], ["password_digest", "$2a$10$YNv6epJ6CzPxa3FlNZZec.TKcCgNZZNUAp6UEVERvigxB1QrVW4Xm"], ["suburb", "Bondi Juction"], ["skill", "Guitar lessons"], ["created_at", "2018-05-18 01:21:14.321738"], ["updated_at", "2018-05-18 01:21:14.321738"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "600@abc.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "credit", "password_digest", "suburb", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tom Shaws"], ["email", "600@abc.com"], ["credit", 2], ["password_digest", "$2a$10$jw.N6aplC8TxvMm9e5eOE.M4pH7wyuOpC7t1p/A.TXZ.2zLfW7TuO"], ["suburb", "Kingsford"], ["skill", "Cooking"], ["created_at", "2018-05-18 01:21:14.387433"], ["updated_at", "2018-05-18 01:21:14.387433"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 5], ["comments", "Good"], ["created_at", "2018-05-18 01:21:14.408047"], ["updated_at", "2018-05-18 01:21:14.408047"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 4], ["comments", "Good"], ["created_at", "2018-05-18 01:21:14.410289"], ["updated_at", "2018-05-18 01:21:14.410289"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 3], ["comments", "Good"], ["created_at", "2018-05-18 01:21:14.412375"], ["updated_at", "2018-05-18 01:21:14.412375"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 5], ["comments", "Good"], ["created_at", "2018-05-18 01:21:14.414381"], ["updated_at", "2018-05-18 01:21:14.414381"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 4], ["comments", "Good"], ["created_at", "2018-05-18 01:21:14.416287"], ["updated_at", "2018-05-18 01:21:14.416287"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transaction_records" ("provider_id", "reciver_id", "credit", "review", "comments", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["provider_id", 1], ["reciver_id", 2], ["credit", 2], ["review", 1], ["comments", "Good"], ["created_at", "2018-05-18 01:21:14.418107"], ["updated_at", "2018-05-18 01:21:14.418107"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" ORDER BY "transaction_records"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" ORDER BY "transaction_records"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" ORDER BY "transaction_records"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT  "transaction_records".* FROM "transaction_records" ORDER BY "transaction_records"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]

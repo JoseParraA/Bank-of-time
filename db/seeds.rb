@@ -17,9 +17,9 @@ u6 = User.create(:name => 'Tom Shaws', :email => '600@abc.com', :password => 'ch
 
 
 TransactionRecord.destroy_all
-b1 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Good')
-b2 = TransactionRecord.create(:credit => 2, :review => 4, :comments => 'Good')
-b3 = TransactionRecord.create(:credit => 2, :review => 3, :comments => 'Good')
-b4 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Good')
-b5 = TransactionRecord.create(:credit => 2, :review => 4, :comments => 'Good')
-b6 = TransactionRecord.create(:credit => 2, :review => 1, :comments => 'Good')
+b1 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Good', :provider => u1, :reciver => u2)
+b2 = TransactionRecord.create(:credit => 2, :review => 4, :comments => 'Good', :provider => u1, :reciver => u2)
+b3 = TransactionRecord.create(:credit => 2, :review => 3, :comments => 'Good', :provider => u1, :reciver => u2)
+b4 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Good', :provider => u1, :reciver => u2)
+b5 = TransactionRecord.create(:credit => 2, :review => 4, :comments => 'Good', :provider => u1, :reciver => u2)
+b6 = TransactionRecord.create(:credit => 2, :review => 1, :comments => 'Good', :provider => u1, :reciver => u2)
