@@ -1,3 +1,4 @@
 class TransactionRecord < ApplicationRecord
-  has_many :users
+  belongs_to :provider, class_name: 'User', :foreign_key => :provider_id
+  belongs_to :reciver, class_name: 'User', :foreign_key => :reciver_id
 end
