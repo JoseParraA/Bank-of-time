@@ -8,5 +8,5 @@ class User < ApplicationRecord
   geocoded_by :address   #using geocoder to convert location into coordinates
   after_validation :geocode   # auto-fetch coordinates
 
-  
+  mount_uploader :image, ImageUploader
 end

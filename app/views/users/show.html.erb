@@ -11,23 +11,18 @@
 </p>
 
 <p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<p>
-  <strong>Suburb:</strong>
+  <strong>Address:</strong>
   <%= @user.address %>
 </p>
 
 <p>
-  <strong>Skill:</strong>
+  <strong>Skills:</strong>
   <%= @user.skill %>
 </p>
 
 <p>
   <strong>Image:</strong>
-  <%= @user.image %>
+  <%= image_tag @user.image.thumb.url %>
 </p>
 
 <p>
@@ -40,8 +35,11 @@
   <%= @user.latitude %>
 </p>
 
-
+<div class="buttoms">
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div>
 
+<div class="maps">
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@user.latitude}%2C#{@user.longitude}" %>
+</div>

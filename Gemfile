@@ -47,6 +47,8 @@ group :development, :test do
   gem 'jquery-rails'
   gem 'bootstrap-sass'
   gem 'geocoder'
+  gem 'carrierwave', '~> 0.10.0'
+  gem 'mini_magick', '~> 4.3'
 end
 
 group :development do
