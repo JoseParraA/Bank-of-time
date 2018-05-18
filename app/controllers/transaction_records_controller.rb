@@ -69,6 +69,6 @@ class TransactionRecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transaction_record_params
-      params.require(:transaction_record).permit(:user_id, :user_id, :credit, :review, :comments)
+      params.require(:transaction_record).permit(:provider, :reciver, :credit, :review, :comments)
     end
 end
