@@ -9,4 +9,6 @@ class User < ApplicationRecord
   after_validation :geocode   # auto-fetch coordinates
 
   mount_uploader :image, ImageUploader, :presence => false, :optional => true
+
+  include Filterable
 end

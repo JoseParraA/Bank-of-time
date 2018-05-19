@@ -41,10 +41,44 @@
 </p> -->
 
 <div class="buttoms">
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_path(@user) %>
 <%= link_to 'Back', users_path %>
 </div>
 
 <div class="maps">
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@user.latitude}%2C#{@user.longitude}" %>
 </div>
+
+
+  <h2> Transaction record <%= @user.name %> </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Provider</th>
+        <th>Reciver</th>
+        <th>Credit</th>
+        <th>Review</th>
+        <th>Comments</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @transaction_record.select{ @user }.each do |transaction_record| %>
+        <tr>
+          <td><%= transaction_record.provider.name %></td>
+          <td><%= transaction_record.reciver.name %></td>
+          <td><%= transaction_record.review %></td>
+          <td><%= transaction_record.comments %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+<!-- sdfs -->

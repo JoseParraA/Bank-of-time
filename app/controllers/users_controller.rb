@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
+    @transaction_record = TransactionRecord.all
+
   end
 
   # GET /users/new
