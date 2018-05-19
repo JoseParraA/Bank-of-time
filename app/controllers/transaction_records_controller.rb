@@ -10,6 +10,7 @@ class TransactionRecordsController < ApplicationController
   # GET /transaction_records/1
   # GET /transaction_records/1.json
   def show
+
   end
 
   # GET /transaction_records/new

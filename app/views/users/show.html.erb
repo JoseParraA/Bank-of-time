@@ -22,10 +22,15 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @user.image.thumb.url %>
+  <br>
+  <% if @user.image.present? %>
+    <%= image_tag @user.image.thumb.url %>
+    <% else %>
+    <%= image_tag('default1.jpg') %>
+  <% end %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Longitude:</strong>
   <%= @user.longitude %>
 </p>
@@ -33,7 +38,7 @@
 <p>
   <strong>Latitude:</strong>
   <%= @user.latitude %>
-</p>
+</p> -->
 
 <div class="buttoms">
 <%= link_to 'Edit', edit_user_path(@user) %> |
