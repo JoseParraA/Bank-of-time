@@ -3,6 +3,7 @@
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
+
 </p>
 
 <p>
@@ -26,7 +27,7 @@
   <% if @user.image.present? %>
     <%= image_tag @user.image.thumb.url %>
     <% else %>
-    <%= image_tag('default1.jpg') %>
+    <%= image_tag('avatar-default.png') %>
   <% end %>
 </p>
 
@@ -41,7 +42,7 @@
 </p> -->
 
 <div class="buttoms">
-<%= link_to 'Edit', edit_user_path(@user) %>
+<!-- <%= link_to 'Edit', edit_user_path(@user) %> -->
 <%= link_to 'Back', users_path %>
 </div>
 
@@ -50,7 +51,29 @@
 </div>
 
 
-  <h2> Transaction record <%= @user.name %> </h2>
+
+
+<div class="rating">
+  <h3> Transaction record and Rating of <%= @user.name %> </h3>
+  <% sum = 0 %>
+  <% count = 0 %>
+  <% total = 0 %>
+
+  <% @transaction_record.each do |t| %>
+      <% p = t.review.to_i %>
+      <% sum += p %>
+      <% count += 1 %>
+  <% end %>
+  <% total = sum / count %>
+  <%= count  %>
+
+  <% total.times do  %>
+   <span class="glyphicon glyphicon-star"></span>
+  <% end %>
+</div>
+
+
+<br>
   <table>
     <thead>
       <tr>
@@ -64,16 +87,20 @@
     </thead>
 
     <tbody>
-      <% @transaction_record.select{ @user }.each do |transaction_record| %>
-        <tr>
-          <td><%= transaction_record.provider.name %></td>
-          <td><%= transaction_record.reciver.name %></td>
-          <td><%= transaction_record.review %></td>
-          <td><%= transaction_record.comments %></td>
-        </tr>
-      <% end %>
+      <% @transaction_record.each do |transaction_record| %>
+    <% if transaction_record.provider == @user ||  transaction_record.reciver == @user %>
+      <tr>
+        <td><%= transaction_record.provider.name %></td>
+        <td><%= transaction_record.reciver.name %></td>
+        <td><%= transaction_record.review %></td>
+        <td><%= transaction_record.comments %></td>
+      </tr>
+    <% end %>
+  <% end %>
     </tbody>
   </table>
+
+
 
 
 

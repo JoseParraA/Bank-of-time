@@ -29,9 +29,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
   gem 'bcrypt', '~> 3.1.7'
+  gem 'jquery-rails'
   gem 'carrierwave', '~> 0.10.0'
   ruby '2.4.1'
-
+  # gem 'bootstrap', '~> 4.1.0'
+  gem 'bootstrap-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :production do
@@ -50,6 +52,7 @@ group :development, :test do
   gem 'bootstrap-sass'
   gem 'geocoder'
   gem 'mini_magick', '~> 4.3'
+
 end
 
 group :development do
@@ -63,3 +66,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'devise', '~> 4.2'

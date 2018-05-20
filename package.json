@@ -1,5 +1,7 @@
 {
   "name": "Bank_of_Time",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  }
 }

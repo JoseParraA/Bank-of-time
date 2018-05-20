@@ -10,33 +10,94 @@
 
   <body>
     <header>
-    <div class="nav">
+      <div class="nav">
       <nav>
         <div class="main_nav">
           <ul>
-            <li><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'Transaction Record', transaction_records_path %></li>
-            <li><%= link_to 'Profiles', users_path %></li>
+            <li style="color:lightblue"><%= link_to 'Home', root_path %></li>
 
+
+            <% if @current_user.present?%>
+            <li style="color:lightblue"><%= link_to "#{ @current_user.name }'s profile",  users_path %></li>
+            <% else %></li>
+            <li style="color:lightblue"><%= link_to 'Transaction Record', transaction_records_path %></li>
+            <% end %>
+            <li style="color:lightblue"><%= link_to 'Profiles', users_path %></li>
           </ul>
-        </div><!-- END main_nav DIV -->
+        </div>
         <div class="signup_nav">
           <ul>
           <li>
             <% if @current_user.present?%>
               <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete', :class => 'small-signin' %>
-            <% else %>
-          </li>
-            <li><%= link_to 'Sign up', new_user_path %></li>
-            <li><%= link_to 'Log in', login_path %></li>
-            <% end %>
+            <% else %></li>
+            <li><%= link_to 'Sign up', new_user_path %><%= link_to 'Log in', login_path %></li>
+            <!-- <li><%= link_to 'Log in', login_path %></li> -->
           </ul>
-        </div><!-- END signup_nav DIV -->
-      </nav><!-- END nav -->
-    </header><!-- END header -->
+          <% end %>
+        </div>
+      </nav>
+    </header>
+
+
 
     <div>
         <%= yield %>
     </div>
+
+
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Bank Of Time</h3>
+
+        <p class="footer-links">
+          <%= link_to 'Home', root_path %>
+          |
+          <%= link_to 'Profiles', users_path %>
+
+        </p>
+
+        <p class="footer-company-name">Bank of Time &copy; 2018</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>21 Revolution Street</span> Sydney, Australia</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+61 455 123456</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="bankoftime@company.com">support@bankoftime.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          It is a system of exchange of services for services or favors for favors.
+          It offers the advantage of fostering social relations and equality between
+           different economic strata</p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook">Facebook</i></a><br>
+          <a href="#"><i class="fa fa-twitter">Twiter</i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
   </body>
 </html>
