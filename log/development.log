@@ -18052,3 +18052,1337 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 112ms (Views: 106.2ms | ActiveRecord: 1.0ms)
 
 
+Started DELETE "/login" for 127.0.0.1 at 2018-05-20 22:29:49 +1000
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RoVlWhWgkjFiW6I3DpEIN8msakzShjs0tGaPsvcD55XBqq259pRLKUTmXnY1TeZadkx0BOrqKrk8uivGwXp86A=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 87ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-20 22:29:49 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 832ms (Views: 825.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 22:29:58 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 109ms (Views: 102.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-05-20 22:30:03 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.7ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 154ms (Views: 126.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2018-05-20 22:32:52 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.5ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 93ms (Views: 85.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2018-05-20 22:33:01 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 75ms (Views: 71.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2018-05-20 22:33:11 +1000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0pH+yhqfgqoAqAwc03HOLFBkqPzO4BkQ9DE+mNgsTwtVvjYp+atbsiYV8F3orSBB74S2tPaMCJ187Zrs7lXUdg==", "id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 32ms (ActiveRecord: 21.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 22:33:12 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 183ms (Views: 155.4ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 22:33:29 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 90ms (Views: 87.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 22:33:32 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (49.9ms)
+  Rendered users/new.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 135ms (Views: 129.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 22:34:02 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6V8AH/aBV1fmpVBFYTXf6mB13OsirdG38+ijJT+KM/tucMj8FbWOT8AYrARa6TGH35XCoxrBwDp7NAdRCfOohg==", "user"=>{"name"=>"Jose Juan", "email"=>"jjpalco@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Wentworth street", "skill"=>"none"}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jjpalco@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "address", "skill", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jose Juan"], ["email", "jjpalco@gmail.com"], ["password_digest", "$2a$10$DPq6FRwhg1EbMOGOxXEhjOOgTmBYzKT3uSxFZSkM8npghRJf5Iwga"], ["address", "Wentworth street"], ["skill", "none"], ["longitude", -79.9377367], ["latitude", 32.780974], ["created_at", "2018-05-20 12:34:03.380447"], ["updated_at", "2018-05-20 12:34:03.380447"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 8977a681-5cd9-4991-9f72-55f78bb2462c) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007fbe22636ec8 @uri=#<URI::GID gid://bank-of-time/User/14>>}
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 1313ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2018-05-20 22:34:03 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.8ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8977a681-5cd9-4991-9f72-55f78bb2462c] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 8977a681-5cd9-4991-9f72-55f78bb2462c) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007fbe1e38ab88 @uri=#<URI::GID gid://bank-of-time/User/14>>}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (48.9ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8977a681-5cd9-4991-9f72-55f78bb2462c]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8977a681-5cd9-4991-9f72-55f78bb2462c]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (19.8ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8977a681-5cd9-4991-9f72-55f78bb2462c] UserMailer#welcome_email: processed outbound mail in 62.0ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [8977a681-5cd9-4991-9f72-55f78bb2462c] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: 8977a681-5cd9-4991-9f72-55f78bb2462c) from Async(mailers) in 64.12ms: ActionView::Template::Error (undefined method `login' for #<User:0x007fbe225bf350>):
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activemodel-5.1.6/lib/active_model/attribute_methods.rb:432:in `method_missing'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/views/user_mailer/welcome_email.html.erb:11:in `_app_views_user_mailer_welcome_email_html_erb___1645711362240910199_70227298448760'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:157:in `block in render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:168:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:352:in `instrument_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:155:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:14:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:103:in `_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:83:in `render_to_body'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/rendering.rb:24:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:945:in `block in collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `map'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:927:in `collect_responses'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:830:in `mail'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/mailers/user_mailer.rb:7:in `welcome_email'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:186:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:124:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:23:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:22:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:609:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:608:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:132:in `block in processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `tap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:148:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:33:in `perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:22:in `block in execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:67:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:20:in `execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+Completed 200 OK in 142ms (Views: 133.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 22:35:28 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 148ms (Views: 144.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2018-05-20 22:35:34 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 105ms (Views: 97.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2018-05-20 22:37:32 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.8ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 112ms (Views: 104.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 22:37:40 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 86ms (Views: 82.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/14" for 127.0.0.1 at 2018-05-20 22:37:46 +1000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0TD5CzvP7GSYW73OMzHcTHzy87oFvq9meN5BpBsyvclWHzHo2Ps1fL7mQY8I7TIhwxLt8j3SvuvwAuXQLUsmtA==", "id"=>"14"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 22:37:46 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 84ms (Views: 80.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 22:37:51 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 84ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 22:38:27 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J8E/bmD5Z+0+N7IRFSu2AYBE40UKwf6XgqMmJOCjA+2g7veNg82+9RiKTlAu91hsP6T9DTKt7xoKf4JQ1tqYkA==", "user"=>{"name"=>"Jose Juan", "email"=>"jjpalco@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Wentworth street", "skill"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jjpalco@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "address", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jose Juan"], ["email", "jjpalco@gmail.com"], ["password_digest", "$2a$10$RJdZmHlmozYi7F710oyuKuLiGqXE0mvat64c.CHNkILltmhmxctpC"], ["address", "Wentworth street"], ["skill", ""], ["created_at", "2018-05-20 12:38:30.628467"], ["updated_at", "2018-05-20 12:38:30.628467"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 0abfcc5b-3c92-40b8-9c47-125926c5d23b) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007fbe1da51710 @uri=#<URI::GID gid://bank-of-time/User/15>>}
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 3145ms (ActiveRecord: 3.7ms)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [0abfcc5b-3c92-40b8-9c47-125926c5d23b] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 0abfcc5b-3c92-40b8-9c47-125926c5d23b) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007fbe1ce10f28 @uri=#<URI::GID gid://bank-of-time/User/15>>}
+Started GET "/users/15" for 127.0.0.1 at 2018-05-20 22:38:30 +1000
+Processing by UsersController#show as HTML
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [0abfcc5b-3c92-40b8-9c47-125926c5d23b]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Parameters: {"id"=>"15"}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [0abfcc5b-3c92-40b8-9c47-125926c5d23b]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (7.3ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [0abfcc5b-3c92-40b8-9c47-125926c5d23b] UserMailer#welcome_email: processed outbound mail in 37.1ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [0abfcc5b-3c92-40b8-9c47-125926c5d23b] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: 0abfcc5b-3c92-40b8-9c47-125926c5d23b) from Async(mailers) in 38.47ms: ActionView::Template::Error (undefined method `login' for #<User:0x007fbe1ce15a00>):
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activemodel-5.1.6/lib/active_model/attribute_methods.rb:432:in `method_missing'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/views/user_mailer/welcome_email.html.erb:11:in `_app_views_user_mailer_welcome_email_html_erb___1645711362240910199_70227297152320'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:157:in `block in render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:168:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:352:in `instrument_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:155:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:14:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:103:in `_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:83:in `render_to_body'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/rendering.rb:24:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:945:in `block in collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `map'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:927:in `collect_responses'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:830:in `mail'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/mailers/user_mailer.rb:7:in `welcome_email'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:186:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:124:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:23:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:22:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:609:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:608:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:132:in `block in processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `tap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:148:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:33:in `perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:22:in `block in execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:67:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:20:in `execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.4ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 102ms (Views: 95.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 22:42:40 +1000
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 639ms (Views: 580.4ms | ActiveRecord: 8.4ms)
+
+
+Started DELETE "/users/15" for 127.0.0.1 at 2018-05-20 22:42:47 +1000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WNuPz4wZ6L8a09GlLQ6E/fZqSuHBJmPDz+Qff9dvOarf9Ecsby0xpzxuLeQW0mqQSYpUqflKck5HOLsL4Rai1w==", "id"=>"15"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 21ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 22:42:47 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 22:42:51 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (48.6ms)
+  Rendered users/new.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 134ms (Views: 129.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 22:43:08 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zRKREwwS32SfJD/ewSKpJoCBVGlCtKKQCdQzKy3reXNKPVnw7yYGfLmZw5/6/kdLP2FKIXrYsx2BCJdfG5LiDg==", "user"=>{"name"=>"Jose Juan", "email"=>"jjpalco@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Wentworth street", "skill"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jjpalco@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "address", "skill", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jose Juan"], ["email", "jjpalco@gmail.com"], ["password_digest", "$2a$10$VhEpA3P2mBo3dVE5h7nAiu.PRpciAgAieAtaEXDIQakmPO8hBMk3e"], ["address", "Wentworth street"], ["skill", ""], ["longitude", -95.3807514], ["latitude", 29.7289765], ["created_at", "2018-05-20 12:43:09.787891"], ["updated_at", "2018-05-20 12:43:09.787891"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 778c82ad-1da6-4402-b4fc-f2cfbdfac5e3) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007f81e6eca378 @uri=#<URI::GID gid://bank-of-time/User/16>>}
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 1272ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/users/16" for 127.0.0.1 at 2018-05-20 22:43:10 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.7ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [778c82ad-1da6-4402-b4fc-f2cfbdfac5e3] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 778c82ad-1da6-4402-b4fc-f2cfbdfac5e3) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007f81e61155c0 @uri=#<URI::GID gid://bank-of-time/User/16>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [778c82ad-1da6-4402-b4fc-f2cfbdfac5e3]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [778c82ad-1da6-4402-b4fc-f2cfbdfac5e3]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (11.7ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [778c82ad-1da6-4402-b4fc-f2cfbdfac5e3] UserMailer#welcome_email: processed outbound mail in 54.9ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [778c82ad-1da6-4402-b4fc-f2cfbdfac5e3] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: 778c82ad-1da6-4402-b4fc-f2cfbdfac5e3) from Async(mailers) in 55.73ms: ActionView::Template::Error (undefined method `login' for #<User:0x007f81eba1dca8>):
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activemodel-5.1.6/lib/active_model/attribute_methods.rb:432:in `method_missing'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/views/user_mailer/welcome_email.html.erb:11:in `_app_views_user_mailer_welcome_email_html_erb___1120866015876529266_70097950601940'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:157:in `block in render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:168:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:352:in `instrument_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:155:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:14:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:103:in `_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:83:in `render_to_body'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/rendering.rb:24:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:945:in `block in collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `map'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:927:in `collect_responses'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:830:in `mail'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/mailers/user_mailer.rb:7:in `welcome_email'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:186:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:124:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:23:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:22:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:609:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:608:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:132:in `block in processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `tap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:148:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:33:in `perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:22:in `block in execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:67:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:20:in `execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (90.2ms)
+Completed 200 OK in 211ms (Views: 158.5ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 23:17:06 +1000
+  [1m[35m (8.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 680ms (Views: 622.8ms | ActiveRecord: 13.7ms)
+
+
+Started DELETE "/users/16" for 127.0.0.1 at 2018-05-20 23:17:13 +1000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"L61G+rKIWS51Bq+R5WJfnzgkuFnrcmoWWOq+aNf7Z3mogo4ZUbyANlO7U9DevrHyh8SmEdMee5vQNhoc4YL8BA==", "id"=>"16"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 21ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 23:17:13 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 100ms (Views: 96.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 23:17:15 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (53.4ms)
+  Rendered users/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 144ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 23:17:40 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6ZCuxE9Zpi06PoQGLHDHzXw7Fzh9FQTxzODsfqSGc21uv2YnrG1/NRyDeEcXrCmgw9sJcEV5FXxEPEgKkv/oEA==", "user"=>{"name"=>"Jose Juan", "email"=>"jjpalco@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Wentworth street", "skill"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jjpalco@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (7.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "address", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jose Juan"], ["email", "jjpalco@gmail.com"], ["password_digest", "$2a$10$.d78etjnsIgvILIB923.0.BzmRSetdZMQ780tkXt2rdxp5RoaWtrW"], ["address", "Wentworth street"], ["skill", ""], ["created_at", "2018-05-20 13:17:58.543015"], ["updated_at", "2018-05-20 13:17:58.543015"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 5fc54aca-fab4-4656-acde-ca7df7faebe0) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007fc66eb2ec38 @uri=#<URI::GID gid://bank-of-time/User/17>>}
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 18572ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/users/17" for 127.0.0.1 at 2018-05-20 23:17:58 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (1.9ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [5fc54aca-fab4-4656-acde-ca7df7faebe0] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 5fc54aca-fab4-4656-acde-ca7df7faebe0) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007fc66b9f5a68 @uri=#<URI::GID gid://bank-of-time/User/17>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [5fc54aca-fab4-4656-acde-ca7df7faebe0]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [5fc54aca-fab4-4656-acde-ca7df7faebe0]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (10.8ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [5fc54aca-fab4-4656-acde-ca7df7faebe0] UserMailer#welcome_email: processed outbound mail in 67.2ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [5fc54aca-fab4-4656-acde-ca7df7faebe0] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: 5fc54aca-fab4-4656-acde-ca7df7faebe0) from Async(mailers) in 68.46ms: ActionView::Template::Error (undefined method `login' for #<User:0x007fc66d2e1860>):
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activemodel-5.1.6/lib/active_model/attribute_methods.rb:432:in `method_missing'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/views/user_mailer/welcome_email.html.erb:11:in `_app_views_user_mailer_welcome_email_html_erb___3466604100191466578_70245098048600'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:157:in `block in render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:168:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:352:in `instrument_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:155:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:14:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:103:in `_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:83:in `render_to_body'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/rendering.rb:24:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:945:in `block in collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `map'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:927:in `collect_responses'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:830:in `mail'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/mailers/user_mailer.rb:7:in `welcome_email'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:186:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:124:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:23:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:22:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:609:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:608:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:132:in `block in processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `tap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:148:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:33:in `perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:22:in `block in execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:67:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:20:in `execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (131.9ms)
+Completed 200 OK in 250ms (Views: 189.3ms | ActiveRecord: 41.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 23:28:40 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 141ms (Views: 121.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/17" for 127.0.0.1 at 2018-05-20 23:28:44 +1000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5IQ4qMQRPosbWI7ZagsWku9hfNlzrSUBSjmAOmCLyXljq/BLJyXnkz3lcphR1/j/UIFikUvBNIzC5SROVvJSBA==", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 14ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 23:28:44 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 99ms (Views: 96.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 23:28:49 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 81ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 23:29:09 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gAYqs2c7LfbdBoEvejPaDhGJo2ghXBWFqOmdx6qoEXEHKeJQhA/07vu7fW5B7zRjrmm9IBkwBAggNTmznNGKDA==", "user"=>{"name"=>"jose", "email"=>"jjpalco@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Wentworth street", "skill"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jjpalco@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "address", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "jose"], ["email", "jjpalco@gmail.com"], ["password_digest", "$2a$10$vjsH6wMLzVUKtmDGLpsdbecMNcGGYDlZOIuPwL6y9XGv6hFk4rTVy"], ["address", "Wentworth street"], ["skill", ""], ["created_at", "2018-05-20 13:29:09.471351"], ["updated_at", "2018-05-20 13:29:09.471351"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 416e7390-fbe7-4a5a-8ac3-fed0ba69f580) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007fc66ecbe3c8 @uri=#<URI::GID gid://bank-of-time/User/18>>}
+Redirected to http://localhost:3000/users/18
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 302 Found in 321ms (ActiveRecord: 4.2ms)
+
+
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [416e7390-fbe7-4a5a-8ac3-fed0ba69f580] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 416e7390-fbe7-4a5a-8ac3-fed0ba69f580) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007fc66ec756c8 @uri=#<URI::GID gid://bank-of-time/User/18>>}
+Started GET "/users/18" for 127.0.0.1 at 2018-05-20 23:29:09 +1000
+Processing by UsersController#show as HTML
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [416e7390-fbe7-4a5a-8ac3-fed0ba69f580]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Parameters: {"id"=>"18"}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [416e7390-fbe7-4a5a-8ac3-fed0ba69f580]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (8.9ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [416e7390-fbe7-4a5a-8ac3-fed0ba69f580] UserMailer#welcome_email: processed outbound mail in 39.3ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [416e7390-fbe7-4a5a-8ac3-fed0ba69f580] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: 416e7390-fbe7-4a5a-8ac3-fed0ba69f580) from Async(mailers) in 40.21ms: ActionView::Template::Error (undefined method `login' for #<User:0x007fc66ec7f510>):
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activemodel-5.1.6/lib/active_model/attribute_methods.rb:432:in `method_missing'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/views/user_mailer/welcome_email.html.erb:11:in `_app_views_user_mailer_welcome_email_html_erb___3466604100191466578_70245119271500'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:157:in `block in render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:168:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:352:in `instrument_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:155:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:14:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:103:in `_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:83:in `render_to_body'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/rendering.rb:24:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:945:in `block in collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `map'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:927:in `collect_responses'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:830:in `mail'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/mailers/user_mailer.rb:7:in `welcome_email'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:186:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:124:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:23:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:22:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:609:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:608:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:132:in `block in processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `tap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:148:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:33:in `perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:22:in `block in execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:67:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:20:in `execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.7ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 129ms (Views: 107.9ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-20 23:29:31 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-20 23:29:40 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/PT65n1xcfRWkRowS55bf/YKhjlNLI1oUmP3Mvvpx1F72zIFnkWo7HAs5nFwQrUSSeqYcXVAnOXav1NGzZBcLA==", "email"=>"jjpalco@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jjpalco@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 72ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-20 23:29:40 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-20 23:31:52 +1000
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S8PurtrLdFdMJcI1NnP9Ty6rbxqZMgb943uBltdK237M7CZNOf+tT2qYPnQNrxMikUtxUqFeF3BrpyXi4TNAAw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 80ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-20 23:31:52 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 559ms (Views: 555.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 23:32:00 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 124ms (Views: 118.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/18" for 127.0.0.1 at 2018-05-20 23:32:05 +1000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OwXKQDNlx1MRbRy3kVBZtlzEUNfJsu2H+Kel4mTVNcW8KgKj0FEeSzfQ4PaqjLfb4yROn/He/ApwewGWUqyuuA==", "id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 19ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 23:32:05 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 23:32:10 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (48.8ms)
+  Rendered users/new.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 128ms (Views: 123.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 23:32:26 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ad7hsmSBYHo1bMgbwuh7h3gNSqQxwMbg6zu3W6GeVZaG8SlRh7W5YhPRNFr5NJXqx+1U7Ams121j5xMvl+fO6w==", "user"=>{"name"=>"Jose Parra", "email"=>"jjpalco@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Wentworth street", "skill"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jjpalco@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "address", "skill", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jose Parra"], ["email", "jjpalco@gmail.com"], ["password_digest", "$2a$10$6UojrcJki9CB5.DHifYrleQC6/djPXUby1N24ICTOuPbR0s.3nhIi"], ["address", "Wentworth street"], ["skill", ""], ["created_at", "2018-05-20 13:32:26.513599"], ["updated_at", "2018-05-20 13:32:26.513599"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 70ec14be-17ff-47a6-97c1-fd918a35d74d) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007f913cc848b0 @uri=#<URI::GID gid://bank-of-time/User/19>>}
+Redirected to http://localhost:3000/users/19
+Completed 302 Found in 705ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/users/19" for 127.0.0.1 at 2018-05-20 23:32:26 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.6ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [70ec14be-17ff-47a6-97c1-fd918a35d74d] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 70ec14be-17ff-47a6-97c1-fd918a35d74d) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007f913cbd20c0 @uri=#<URI::GID gid://bank-of-time/User/19>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [70ec14be-17ff-47a6-97c1-fd918a35d74d]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [70ec14be-17ff-47a6-97c1-fd918a35d74d]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (14.5ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [70ec14be-17ff-47a6-97c1-fd918a35d74d] UserMailer#welcome_email: processed outbound mail in 63.2ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [70ec14be-17ff-47a6-97c1-fd918a35d74d] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: 70ec14be-17ff-47a6-97c1-fd918a35d74d) from Async(mailers) in 64.04ms: ActionView::Template::Error (undefined method `login' for #<User:0x007f913cbda8d8>):
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activemodel-5.1.6/lib/active_model/attribute_methods.rb:432:in `method_missing'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/views/user_mailer/welcome_email.html.erb:11:in `_app_views_user_mailer_welcome_email_html_erb__4609765103194170969_70130882944600'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:157:in `block in render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:168:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:352:in `instrument_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/template.rb:155:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:52:in `block (2 levels) in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:51:in `block in render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/template_renderer.rb:14:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:103:in `_render_template'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:83:in `render_to_body'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/rendering.rb:24:in `render'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:945:in `block in collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `each'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `map'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:942:in `collect_responses_from_templates'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:927:in `collect_responses'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:830:in `mail'
+/Users/josejuan.parraalcolea/Projects/Project3/Bank-of-time/app/mailers/user_mailer.rb:7:in `welcome_email'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:186:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:124:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:23:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/rescuable.rb:22:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:609:in `block in process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/base.rb:608:in `process'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:132:in `block in processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `tap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:130:in `processed_mailer'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/actionmailer-5.1.6/lib/action_mailer/parameterized.rb:148:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:37:in `block in perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `block in tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:44:in `tag_logger'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:33:in `perform_now'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:22:in `block in execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:68:in `block in wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/reloader.rb:67:in `wrap'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `instance_exec'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/execution.rb:20:in `execute'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/activejob-5.1.6/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/Users/josejuan.parraalcolea/.rvm/gems/ruby-2.4.1/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (91.8ms)
+Completed 200 OK in 206ms (Views: 152.8ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 23:35:14 +1000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 725ms (Views: 668.0ms | ActiveRecord: 8.2ms)
+
+
+Started DELETE "/users/19" for 127.0.0.1 at 2018-05-20 23:35:19 +1000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rDAIH4oNl1yYdSsurjsOJEMj62NaxCx9XUTylTYegEkrH8D8aTlORL7I12+V5+BJ/MP1K2KoPfDVmFbhAGcbNA==", "id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 20ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 23:35:19 +1000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 101ms (Views: 97.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 23:35:23 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (50.2ms)
+  Rendered users/new.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 124ms (Views: 120.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 23:35:39 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DKGaGZvjoX8w3lLjUg4FTuwG/c1DHyCFtx38Y6DQiG6LjlL6eNd4ZxZjrqJp0usjU+bjhXtzMQg/wVgXlqkTEw==", "user"=>{"name"=>"Jose Parra", "email"=>"jjpalco@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Wentworth street", "skill"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jjpalco@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "address", "skill", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jose Parra"], ["email", "jjpalco@gmail.com"], ["password_digest", "$2a$10$nF91doNE4L/8bLaPTVhZvugdBmpzcHWHgXPJN04mf.Cvijk6lMnw2"], ["address", "Wentworth street"], ["skill", ""], ["longitude", -95.3807514], ["latitude", 29.7289765], ["created_at", "2018-05-20 13:35:40.525991"], ["updated_at", "2018-05-20 13:35:40.525991"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 28919a4b-1044-4ed8-acc9-032a386243c7) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007f8896a38330 @uri=#<URI::GID gid://bank-of-time/User/20>>}
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 1271ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/users/20" for 127.0.0.1 at 2018-05-20 23:35:40 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTransactionRecord Load (0.9ms)[0m  [1m[34mSELECT "transaction_records".* FROM "transaction_records"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 28919a4b-1044-4ed8-acc9-032a386243c7) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", {:user=>#<GlobalID:0x007f8895357aa8 @uri=#<URI::GID gid://bank-of-time/User/20>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7]   Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7]   Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (129.4ms)
+Completed 200 OK in 380ms (Views: 308.1ms | ActiveRecord: 53.9ms)
+
+
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7] UserMailer#welcome_email: processed outbound mail in 610.8ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7] Sent mail to jjpalco@gmail.com (2397.7ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7] Date: Sun, 20 May 2018 23:35:41 +1000
+From: joseparraalcolea@gmail.com
+To: jjpalco@gmail.com
+Message-ID: <5b0179ada602f_e1233fc44b515dc061770@192-168-1-5.tpgi.com.au.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b0179ad9a6d5_e1233fc44b515dc0616ec";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b0179ad9a6d5_e1233fc44b515dc0616ec
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Welcome to example.com, Jose Parra
+===============================================
+
+You have successfully signed up to example.com,
+your username is: Jose Parra.
+
+To login to the site, just follow this link: .
+
+Thanks for joining and have a great day!
+
+
+----==_mimepart_5b0179ad9a6d5_e1233fc44b515dc0616ec
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to example.com, Jose Parra</h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: Jose Parra.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: .
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5b0179ad9a6d5_e1233fc44b515dc0616ec--
+
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [28919a4b-1044-4ed8-acc9-032a386243c7] Performed ActionMailer::Parameterized::DeliveryJob (Job ID: 28919a4b-1044-4ed8-acc9-032a386243c7) from Async(mailers) in 3022.35ms
