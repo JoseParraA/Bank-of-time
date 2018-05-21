@@ -21561,3 +21561,128 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/conversations" for 127.0.0.1 at 2018-05-21 11:42:25 +1000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConversationsController#index as HTML
+  Rendering conversations/index.html.erb within layouts/application
+  [1m[36mConversation Load (0.9ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 421ms (Views: 399.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2018-05-21 11:42:29 +1000
+Processing by ConversationsController#new as HTML
+  Rendering conversations/new.html.erb within layouts/application
+  Rendered conversations/_form.html.erb (22.9ms)
+  Rendered conversations/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 128ms (Views: 112.5ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/conversations" for 127.0.0.1 at 2018-05-21 11:42:31 +1000
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pk86vMyE6JYFkdPO7udDhmv9ByvdB9bKZ5o2S1/wjmshYPJfL7AxjiMsL4/VO63r1B0ZY+Vrx0fvRpI/aYkVFg==", "commit"=>"Create Conversation"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering conversations/new.html.erb within layouts/application
+  Rendered conversations/_form.html.erb (2.4ms)
+  Rendered conversations/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 94ms (Views: 81.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/conversations" for 127.0.0.1 at 2018-05-21 11:42:35 +1000
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"saHs0Ac7RJtE99vRIf8LOTX+CVoIqKJ6Qx7OyW5qjHY2jiQz5A+dg2JKJ5AaI+VUih4XEjDEs/fLwmq9WBMXCw==", "commit"=>"Create Conversation"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering conversations/new.html.erb within layouts/application
+  Rendered conversations/_form.html.erb (1.9ms)
+  Rendered conversations/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2018-05-21 11:42:37 +1000
+Processing by ConversationsController#index as HTML
+  Rendering conversations/index.html.erb within layouts/application
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2018-05-21 11:46:36 +1000
+Processing by ConversationsController#new as HTML
+  Rendering conversations/new.html.erb within layouts/application
+  Rendered conversations/_form.html.erb (1.3ms)
+  Rendered conversations/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 78ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2018-05-21 11:47:58 +1000
+Processing by ConversationsController#new as HTML
+  Rendering conversations/new.html.erb within layouts/application
+  Rendered conversations/_form.html.erb (15.6ms)
+  Rendered conversations/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2018-05-21 11:49:10 +1000
+Processing by ConversationsController#new as HTML
+  Rendering conversations/new.html.erb within layouts/application
+  Rendered conversations/_form.html.erb (2.9ms)
+  Rendered conversations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 105ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/conversations" for 127.0.0.1 at 2018-05-21 11:49:29 +1000
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+wkjuS+++4i8DgYr3AvUycaj6rgFY7Foll3G2qtNDFUw+xtB4oi9gRNxFmUrME+mPqR4th5n0gqhdNvXNSvTA==", "conversation"=>{"sender"=>"Jose ", "helper"=>"ali", "comments"=>"lksdjflks"}, "commit"=>"Create Conversation"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/conversations_controller.rb:27:in `create'
+Started PUT "/__web_console/repl_sessions/8accc52e9cec160abebcbd57ddb83858" for 127.0.0.1 at 2018-05-21 11:51:41 +1000
+Started PUT "/__web_console/repl_sessions/8accc52e9cec160abebcbd57ddb83858" for 127.0.0.1 at 2018-05-21 11:51:45 +1000
+Started PUT "/__web_console/repl_sessions/8accc52e9cec160abebcbd57ddb83858" for 127.0.0.1 at 2018-05-21 11:52:02 +1000
+Started POST "/conversations" for 127.0.0.1 at 2018-05-21 11:57:18 +1000
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+wkjuS+++4i8DgYr3AvUycaj6rgFY7Foll3G2qtNDFUw+xtB4oi9gRNxFmUrME+mPqR4th5n0gqhdNvXNSvTA==", "conversation"=>{"sender"=>"Jose ", "helper"=>"ali", "comments"=>"lksdjflks"}, "commit"=>"Create Conversation"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 6.2ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70312818140020) expected, got "Jose " which is an instance of String(#70312771616520)):
+  
+app/controllers/conversations_controller.rb:27:in `create'
+Started POST "/conversations" for 127.0.0.1 at 2018-05-21 11:58:10 +1000
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+wkjuS+++4i8DgYr3AvUycaj6rgFY7Foll3G2qtNDFUw+xtB4oi9gRNxFmUrME+mPqR4th5n0gqhdNvXNSvTA==", "conversation"=>{"sender"=>"Jose P", "helper"=>"Sam C", "comments"=>"hola"}, "commit"=>"Create Conversation"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70312818140020) expected, got "Jose P" which is an instance of String(#70312771616520)):
+  
+app/controllers/conversations_controller.rb:27:in `create'
+Started POST "/conversations" for 127.0.0.1 at 2018-05-21 11:58:55 +1000
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+wkjuS+++4i8DgYr3AvUycaj6rgFY7Foll3G2qtNDFUw+xtB4oi9gRNxFmUrME+mPqR4th5n0gqhdNvXNSvTA==", "conversation"=>{"sender"=>"Jose P", "helper"=>"Sam C", "comments"=>"hola"}, "commit"=>"Create Conversation"}
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 10.7ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70198432355060) expected, got "Jose P" which is an instance of String(#70198401335080)):
+  
+app/controllers/conversations_controller.rb:27:in `create'
+Started POST "/conversations" for 127.0.0.1 at 2018-05-21 11:59:19 +1000
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+wkjuS+++4i8DgYr3AvUycaj6rgFY7Foll3G2qtNDFUw+xtB4oi9gRNxFmUrME+mPqR4th5n0gqhdNvXNSvTA==", "conversation"=>{"sender"=>"Jose P", "helper"=>"Sam C", "comments"=>"hola"}, "commit"=>"Create Conversation"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70198432355060) expected, got "Jose P" which is an instance of String(#70198401335080)):
+  
+app/controllers/conversations_controller.rb:27:in `create'
