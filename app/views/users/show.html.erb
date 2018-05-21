@@ -30,7 +30,7 @@
     <%= image_tag('avatar-default.png') %>
   <% end %>
 </p>
-
+<%= link_to 'New Conversation', new_conversation_path %>
 <!-- <p>
   <strong>Longitude:</strong>
   <%= @user.longitude %>
@@ -55,20 +55,27 @@
 
 <div class="rating">
   <h3> Transaction record and Rating of <%= @user.name %> </h3>
-  <% if @transaction_record.present? %>
-    <% sum = 0 %>
-    <% total = 0 %>
-    <% @transaction_record.each do |t| %>
-      <% if t.provider == @user %>
-        <% sum += t.review.to_i %>
+  <% sum = 0 %>
+  <% count = 1 %>
+  <% total = 0 %>
+  <% @transaction_record.each_with_index do |t, i| %>
+    <% if t.provider == @user %>
+      <% sum += t.review.to_i %>
+      <% count += 1 %>
       <% end %>
-    <% end %>
-    <% (total = sum / @transaction_record.length.to_f)%>
-    <%= total %>
-    <%= sum %>
-    <% total.round.times do %>
-      <span class="glyphicon glyphicon-star"></span>
-    <% end %>
+  <% end %>
+  <% count %>
+  <% total = (sum / count) - 1 %>
+  <!-- <%= sum %>
+  <%= count -1 %> -->
+  <!-- <% if total = 0 %>
+  <%= 'There is no ratings from this profile yet' %>
+  <% end %> -->
+  <%= total %>
+  <%= sum %>
+  <%= count %>
+  <% total.times do  %>
+   <span class="glyphicon glyphicon-star"></span>
   <% end %>
 </div>
 

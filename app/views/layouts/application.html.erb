@@ -20,7 +20,7 @@
             <% if @current_user.present?%>
             <li style="color:lightblue"><%= link_to "#{ @current_user.name }'s profile",  users_path %></li>
             <% else %></li>
-            <li style="color:lightblue"><%= link_to 'Transaction Record', transaction_records_path %></li>
+            <li style="color:lightblue"><%= link_to 'Transaction Record', users_path %></li>
             <% end %>
             <li style="color:lightblue"><%= link_to 'Profiles', users_path %></li>
           </ul>

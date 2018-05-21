@@ -26,9 +26,9 @@ b6 = TransactionRecord.create(:credit => 2, :review => 1, :comments => 'Good', :
 
 
 Conversation.destroy_all
-c1 = Conversation.create(:sender => 'Jose P', :helper => 'Tom Shaws', :comments => 'Hello')
-c2 = Conversation.create(:sender => 'Jose P', :helper => 'Megan Long', :comments => 'Good')
-c3 = Conversation.create(:sender => 'Megan Long', :helper => 'Jose P', :comments => 'Hello')
-c4 = Conversation.create(:sender => 'Tom Shaws', :helper => 'Jose P', :comments => 'By')
-c5 = Conversation.create(:sender => 'Jose P', :helper => 'Megan Lon', :comments => 'By')
-c6 = Conversation.create(:sender => 'Jose P', :helper => 'Tom Shaws', :comments => 'Hello')
+c1 = Conversation.create(:sender => u1, :helper => u6, :comments => 'Hello')
+c2 = Conversation.create(:sender => u1, :helper => u5, :comments => 'Good')
+c3 = Conversation.create(:sender => u5, :helper => u1, :comments => 'Hello')
+c4 = Conversation.create(:sender => u6, :helper => u1, :comments => 'By')
+c5 = Conversation.create(:sender => u1, :helper => u5, :comments => 'By')
+c6 = Conversation.create(:sender => u1, :helper => u6, :comments => 'Hello')
