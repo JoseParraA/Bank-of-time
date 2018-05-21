@@ -55,22 +55,20 @@
 
 <div class="rating">
   <h3> Transaction record and Rating of <%= @user.name %> </h3>
-  <% sum = 0 %>
-  <% count = 0 %>
-  <% total = 0 %>
-  <% @transaction_record.each_with_index do |t, i| %>
-    <% if t.provider == @user %>
-      <% sum += t.review.to_i %>
-      <% count = i %>
+  <% if @transaction_record.present? %>
+    <% sum = 0 %>
+    <% total = 0 %>
+    <% @transaction_record.each do |t| %>
+      <% if t.provider == @user %>
+        <% sum += t.review.to_i %>
+      <% end %>
     <% end %>
-  <% end %>
-  <% count+= 1 %>
-  <% (total = sum / count)%>
-  <% total.times do  %>
-  <%= sum %>
-  <%= count %>
-
-    <span class="glyphicon glyphicon-star"></span>
+    <% (total = sum / @transaction_record.length.to_f)%>
+    <%= total %>
+    <%= sum %>
+    <% total.round.times do %>
+      <span class="glyphicon glyphicon-star"></span>
+    <% end %>
   <% end %>
 </div>
 
