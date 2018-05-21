@@ -58,17 +58,19 @@
   <% sum = 0 %>
   <% count = 0 %>
   <% total = 0 %>
-
-  <% @transaction_record.each do |t| %>
-      <% p = t.review.to_i %>
-      <% sum += p %>
-      <% count += 1 %>
+  <% @transaction_record.each_with_index do |t, i| %>
+    <% if t.provider == @user %>
+      <% sum += t.review.to_i %>
+      <% count = i %>
+    <% end %>
   <% end %>
-  <% total = sum / count %>
-  <%= count  %>
-
+  <% count+= 1 %>
+  <% (total = sum / count)%>
   <% total.times do  %>
-   <span class="glyphicon glyphicon-star"></span>
+  <%= sum %>
+  <%= count %>
+
+    <span class="glyphicon glyphicon-star"></span>
   <% end %>
 </div>
 

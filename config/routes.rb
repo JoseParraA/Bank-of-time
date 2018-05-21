@@ -27,6 +27,7 @@
 #                         DELETE /users/:id(.:format)                    users#destroy
 
 Rails.application.routes.draw do
+  resources :conversations
   root :to => 'pages#home' # same as localhost 3000
 
   resources :users, :only => [:new, :create]
