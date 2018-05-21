@@ -15,6 +15,8 @@ class ConversationsController < ApplicationController
   # GET /conversations/new
   def new
     @conversation = Conversation.new
+    @conversation.sender_id = @current_user.id
+    @conversation.helper_id = $helper
   end
 
   # GET /conversations/1/edit
@@ -24,6 +26,7 @@ class ConversationsController < ApplicationController
   # POST /conversations
   # POST /conversations.json
   def create
+
     @conversation = Conversation.new(conversation_params)
 
     respond_to do |format|
@@ -69,6 +72,6 @@ class ConversationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def conversation_params
-      params.require(:conversation).permit(:sender_id, :helper_id, :comments)
+      params.require(:conversation).permit(:sender_id, :helper_id, :comments, :user)
     end
 end

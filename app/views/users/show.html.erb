@@ -30,53 +30,43 @@
     <%= image_tag('avatar-default.png') %>
   <% end %>
 </p>
-<%= link_to 'New Conversation', new_conversation_path %>
-<!-- <p>
-  <strong>Longitude:</strong>
-  <%= @user.longitude %>
-</p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @user.latitude %>
-</p> -->
+<!-- Send Message buttom -->
+<% if @current_user.present? %>
+  <%= link_to 'Send Message', new_conversation_path %>
+<% end %>
 
+<!-- Back buttom -->
 <div class="buttoms">
-<!-- <%= link_to 'Edit', edit_user_path(@user) %> -->
 <%= link_to 'Back', users_path %>
 </div>
 
+<!-- Geolocation -->
 <div class="maps">
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@user.latitude}%2C#{@user.longitude}" %>
 </div>
 
 
-
-
+<!-- Rating Stars -->
 <div class="rating">
   <h3> Transaction record and Rating of <%= @user.name %> </h3>
   <% sum = 0 %>
-  <% count = 1 %>
-  <% total = 0 %>
-  <% @transaction_record.each_with_index do |t, i| %>
-    <% if t.provider == @user %>
-      <% sum += t.review.to_i %>
-      <% count += 1 %>
-      <% end %>
-  <% end %>
-  <% count %>
-  <% total = (sum / count) - 1 %>
-  <!-- <%= sum %>
-  <%= count -1 %> -->
-  <!-- <% if total = 0 %>
-  <%= 'There is no ratings from this profile yet' %>
-  <% end %> -->
-  <%= total %>
-  <%= sum %>
-  <%= count %>
-  <% total.times do  %>
-   <span class="glyphicon glyphicon-star"></span>
-  <% end %>
+   <% count = 1 %>
+   <% total = 0 %>
+   <% @transaction_record.each_with_index do |t, i| %>
+     <% if t.provider == @user %>
+       <% sum += t.review.to_i %>
+       <% count += 1 %>
+       <% end %>
+   <% end %>
+   <% count %>
+   <% total = sum / count - 1 %>
+   <%= sum %>
+   <%= count -1 %>
+   <%= total %>
+   <% total.times do  %>
+    <span class=“glyphicon glyphicon-star”></span>
+   <% end %>
 </div>
 
 
