@@ -8,7 +8,7 @@
 
 
 User.destroy_all
-u1 = User.create(:name => 'Jose P', :email => '100@abc.com', :password => 'chicken',:credit => 2, :address => '4 Broome street 2035 Maroubra', :skill => 'Spanish lessons')
+u1 = User.create(:name => 'Jose P', :email => '100@abc.com', :password => 'chicken',:credit => 2, :address => 'Broome street 2035 Maroubra', :skill => 'Spanish lessons')
 u2 = User.create(:name => 'John C', :email => '200@abc.com', :password => 'chicken',:credit => 2, :address => '212 Bridge Rd, Glebe NSW 2037', :skill => 'IT')
 u3 = User.create(:name => 'Morgan G ', :email => '300@abc.com', :password => 'chicken',:credit => 2, :address => '56-58 York Street, Level M, Sydney NSW 2000', :skill => 'Plumber')
 u4 = User.create(:name => 'Sally Jones', :email => '400@abc.com', :password => 'chicken',:credit => 2, :address => '56/58 Beach Road, Bondi Beach NSW 2026', :skill => 'Gardering')
@@ -24,7 +24,7 @@ TransactionRecord.destroy_all
 b1 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Very good job :)', :provider => u1, :reciver => u2)
 b2 = TransactionRecord.create(:credit => 1, :review => 4, :comments => 'Good job', :provider => u2, :reciver => u2)
 b3 = TransactionRecord.create(:credit => 1, :review => 3, :comments => 'Nice!!', :provider => u3, :reciver => u1)
-b4 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Aprendi mucho!!', :provider => u1, :reciver => u6)
+b4 = TransactionRecord.create(:credit => 2, :review => 3, :comments => 'Aprendi mucho!!', :provider => u1, :reciver => u6)
 b5 = TransactionRecord.create(:credit => 4, :review => 4, :comments => 'My garden looks great now', :provider => u4, :reciver => u2)
 b6 = TransactionRecord.create(:credit => 3, :review => 3, :comments => 'Thanks for fixing my computer', :provider => u2, :reciver => u5)
 b7 = TransactionRecord.create(:credit => 4, :review => 5, :comments => 'Delicious!', :provider => u6, :reciver => u2)
