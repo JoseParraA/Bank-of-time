@@ -91,6 +91,17 @@ label {
     overflow: hidden;
     text-decoration: none;
     font-size: 20px;
+    list-style-type: none;
+}
+.main_nav ul {
+  display: flex;
+  list-style-type: none;
+  padding-top: 1em;
+  font-size: 18px;
+}
+
+.main_nav li {
+  padding-left: 4em;
 }
 
 /* Style the links inside the navigation bar */
@@ -101,6 +112,7 @@ label {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+
 }
 
 /* Change the color of links on hover */
@@ -147,17 +159,6 @@ label {
     background-color: #4CAF50;
     color: white;
 }
-
-// footer{
-// 	position: fixed;
-// 	bottom: 0;
-//   background-color: lightblue;
-// }
-//
-// @media (max-height:800px){
-// 	footer { position: static; }
-// 	header { padding-top:40px; }
-// }
 
 .footer-distributed{
 	background-color: #292c2f;
@@ -329,18 +330,30 @@ label {
 
 .buttoms {
   display: inline-flex;
+  background-color: white;
   margin: 20px;
   font-size: 24px;
-  padding: 1px;
+  padding: 10px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
-}
-.buttoms {
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+  height: 100px;
 }
 
-.buttoms:hover {
-    background-color: grey; /* Green */
-    color: white;
+.new_transaction_record {
+  background-color: white;
+  width: 380px;
+  margin: 4em auto;
+  padding: 3em 2em 2em;
+  background: #fafafa;
+  border: 1px solid black;
+}
+
+.back-buttom {
+  width: 100%;
+ height: 10vh;
+ position: relative;
+ text-align: center;
+ background-color: lightblue;
+ font-size: 20px;
+
 }

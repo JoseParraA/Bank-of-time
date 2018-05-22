@@ -1,6 +1,5 @@
 <%# form_with(model: transaction_record, local: true) do |form| %>
-hello
-<%= $provider.inspect %>
+
 
 <%= form_for transaction_record, :html => { :multipart => true } do |form| %>
 
@@ -43,6 +42,6 @@ hello
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <button><%= form.submit %></button>
   </div>
 <% end %>

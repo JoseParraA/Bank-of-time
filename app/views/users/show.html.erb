@@ -43,10 +43,15 @@
     <!-- Send Message buttom -->
     <div class="buttoms">
       <% if @current_user.present? %>
+      <div class="buttoms">
       <button><%= link_to 'Send Message', new_conversation_path %></button><br>
+      </div>
+      <div class="buttoms">
       <button><%= link_to 'Finish and comment your last deal',new_transaction_record_path %></button><br>
       <% end %>
 
+    </div>
+      <div class="buttoms">
       <!-- Back buttom -->
       <button> <%= link_to 'Back', users_path %></buttom>
     </div>
