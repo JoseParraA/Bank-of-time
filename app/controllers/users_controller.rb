@@ -12,7 +12,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     $helper = @user.id
+    $provider = $helper
     @transaction_record = TransactionRecord.all
+
+    @conversation = Conversation.all
+    # raise hell
   end
 
   # GET /users/new

@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
   gem 'bcrypt', '~> 3.1.7'
-  gem 'jquery-rails'
   gem 'carrierwave', '~> 0.10.0'
   ruby '2.4.1'
   # gem 'bootstrap', '~> 4.1.0'
@@ -50,7 +49,6 @@ group :development, :test do
   gem 'rails-pry'
   gem 'annotate'
   gem 'jquery-rails'
-  gem 'bootstrap-sass'
   gem 'geocoder'
   gem 'mini_magick', '~> 4.3'
 

@@ -15,7 +15,7 @@ class ConversationsController < ApplicationController
   # GET /conversations/new
   def new
     @conversation = Conversation.new
-    @conversation.sender_id = @current_user.id
+    @conversation.sender = @current_user
     @conversation.helper_id = $helper
   end
 
@@ -26,7 +26,6 @@ class ConversationsController < ApplicationController
   # POST /conversations
   # POST /conversations.json
   def create
-
     @conversation = Conversation.new(conversation_params)
 
     respond_to do |format|

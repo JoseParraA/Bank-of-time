@@ -18,11 +18,11 @@ u6 = User.create(:name => 'Tom Shaws', :email => '600@abc.com', :password => 'ch
 
 TransactionRecord.destroy_all
 b1 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Good', :provider => u1, :reciver => u2)
-b2 = TransactionRecord.create(:credit => 2, :review => 4, :comments => 'Good', :provider => u1, :reciver => u2)
-b3 = TransactionRecord.create(:credit => 2, :review => 3, :comments => 'Good', :provider => u1, :reciver => u2)
-b4 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Good', :provider => u1, :reciver => u2)
-b5 = TransactionRecord.create(:credit => 2, :review => 4, :comments => 'Good', :provider => u1, :reciver => u2)
-b6 = TransactionRecord.create(:credit => 2, :review => 1, :comments => 'Good', :provider => u1, :reciver => u2)
+b2 = TransactionRecord.create(:credit => 2, :review => 4, :comments => 'Good', :provider => u2, :reciver => u2)
+b3 = TransactionRecord.create(:credit => 2, :review => 3, :comments => 'Good', :provider => u3, :reciver => u1)
+b4 = TransactionRecord.create(:credit => 2, :review => 5, :comments => 'Good', :provider => u1, :reciver => u6)
+b5 = TransactionRecord.create(:credit => 2, :review => 4, :comments => 'Good', :provider => u4, :reciver => u2)
+b6 = TransactionRecord.create(:credit => 2, :review => 1, :comments => 'Good', :provider => u2, :reciver => u5)
 
 
 Conversation.destroy_all

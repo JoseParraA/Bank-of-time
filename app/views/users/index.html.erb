@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -33,7 +33,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 
 <div class="container latest">
@@ -44,13 +44,13 @@
   <% @users.each do |user| %>
     <a href="<%= users_path %>"> <%# 3 ways product || product_path product.id %>
       <div class="col-xs-12 col-md-4 wrap-users wrap">
-      <% if  not user %>
         <figure>
-          <img href="<%= user.image %>" />
-          <%# To get the image I created a method in product.rb in the model so we can use everywhere in products view, contorller and model  %>
-      <% else %>
-      <img class="img-responsive" src="http://www.fillmurray.com/300/300" alt="" />
-      <% end %>
+          <% if user.image.present? %>
+              <img src="<%=user.image%>" class="img-profile img-rounded" />
+              <%# To get the image I created a method in product.rb in the model so we can use everywhere in products view, contorller and model  %>
+          <% else %>
+          <img class="img-profile img-responsive" src="http://www.fillmurray.com/300/300" alt="" />
+          <% end %>
         </figure>
         <div class="wrap-text">
           <h3><%= link_to user.name, user %></h3>

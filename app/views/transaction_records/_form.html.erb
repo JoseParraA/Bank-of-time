@@ -1,6 +1,8 @@
 <%# form_with(model: transaction_record, local: true) do |form| %>
+hello
+<%= $provider.inspect %>
 
-<%= form_for @transaction_record, :html => { :multipart => true } do |form| %>
+<%= form_for transaction_record, :html => { :multipart => true } do |form| %>
 
 
   <% if transaction_record.errors.any? %>
@@ -16,12 +18,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :provider_id %>
+    <%= form.label :provider %>
     <%= form.number_field :provider_id, id: :transaction_record_user_id %>
   </div>
 
   <div class="field">
-    <%= form.label :reciver_id %>
+    <%= form.label :reciver %>
     <%= form.number_field :reciver_id, id: :transaction_record_user_id %>
   </div>
 
