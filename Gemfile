@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
   ruby '2.4.1'
   # gem 'bootstrap', '~> 4.1.0'
   gem 'bootstrap-sass'
+  gem 'jquery-rails'
+  gem 'mini_magick', '~> 4.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :production do
@@ -49,8 +51,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rails-pry'
   gem 'annotate'
-  gem 'jquery-rails'
-  gem 'mini_magick', '~> 4.3'
 
 end
 
