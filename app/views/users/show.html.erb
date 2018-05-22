@@ -24,8 +24,17 @@
       <%= @user.skill %>
     </p>
     <p><Strong>Credits:</strong> <%= @user.providers.sum(:credit).round %></p>
-  </div>
 
+  <!-- Rating Stars -->
+  <div class="rating">
+    <h4>Rating of <%= @user.name %> </h4>
+    <% if @user.providers.present? %>
+      <% @user.providers.average(:review).round.times do %>
+        <span class="glyphicon glyphicon-star"></span>
+      <% end %>
+    <% end %>
+  </div>
+</div>
     <p>
       <strong>Image:</strong>
       <br>
@@ -57,17 +66,6 @@
       <button> <%= link_to 'Back', users_path %></buttom>
     </div>
 </div>
-
-<!-- Rating Stars -->
-<div class="rating">
-  <h3>Rating of <%= @user.name %> </h3>
-  <% if @user.providers.present? %>
-    <% @user.providers.average(:review).round.times do %>
-      <span class="glyphicon glyphicon-star"></span>
-    <% end %>
-  <% end %>
-</div>
-
 
 <!-- History -->
   <div class="record">
