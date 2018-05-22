@@ -32,7 +32,7 @@ class TransactionRecordsController < ApplicationController
 
     respond_to do |format|
       if @transaction_record.save
-        format.html { redirect_to @transaction_record, notice: 'Transaction record was successfully created.' }
+        format.html { redirect_to users_path, notice: 'Transaction record was successfully created.' }
         format.json { render :show, status: :created, location: @transaction_record }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class TransactionRecordsController < ApplicationController
   def update
     respond_to do |format|
       if @transaction_record.update(transaction_record_params)
-        format.html { redirect_to @transaction_record, notice: 'Transaction record was successfully updated.' }
+        format.html { redirect_to users_path, notice: 'Transaction record was successfully updated.' }
         format.json { render :show, status: :ok, location: @transaction_record }
       else
         format.html { render :edit }
