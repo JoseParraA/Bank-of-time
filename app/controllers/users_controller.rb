@@ -11,8 +11,10 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+
     $helper = @user.id
     $provider = $helper
+
     @transaction_record = TransactionRecord.all
 
     @conversation = Conversation.all
