@@ -35,38 +35,42 @@
         <%= image_tag('avatar-default.png') %>
       <% end %>
     </p>
-  <div class="col-md-6">
+
+
     <!-- Geolocation -->
-    <div class="maps">
-      <img ><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@user.latitude}%2C#{@user.longitude}" %></img>
-    </div>
-</div>
-    <!-- Send Message buttom -->
-    <div class="buttoms">
-      <% if @current_user.present? %>
-      <div class="buttoms">
-      <button><%= link_to 'Send Message', new_conversation_path %></button><br>
+  <div class="col-md-6">
+      <div class="maps">
+        <img ><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@user.latitude}%2C#{@user.longitude}" %></img>
       </div>
+  </div>
+
+
+      <!-- Send Message buttom -->
       <div class="buttoms">
-      <button><%= link_to 'Finish and comment your last deal',new_transaction_record_path %></button><br>
+        <% if @current_user.present? %>
+        <div class="buttoms">
+        <button><%= link_to 'Send Message', new_conversation_path %></button><br>
+        </div>
+        <div class="buttoms">
+        <button><%= link_to 'Finish and comment your last deal',new_transaction_record_path %></button><br>
+        <% end %>
+
+      </div>
+        <div class="buttoms">
+        <!-- Back buttom -->
+        <button> <%= link_to 'Back', users_path %></buttom>
+      </div>
+  </div>
+
+  <!-- RATING  Stars -->
+  <div class="rating">
+    <h3>Rating of <%= @user.name %> </h3>
+    <% if @user.providers.present? %>
+      <% @user.providers.average(:review).round.times do %>
+        <span class="glyphicon glyphicon-star"></span>
       <% end %>
-
-    </div>
-      <div class="buttoms">
-      <!-- Back buttom -->
-      <button> <%= link_to 'Back', users_path %></buttom>
-    </div>
-</div>
-
-<!-- RATING  Stars -->
-<div class="rating">
-  <h3>Rating of <%= @user.name %> </h3>
-  <% if @user.providers.present? %>
-    <% @user.providers.average(:review).round.times do %>
-      <span class="glyphicon glyphicon-star"></span>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
 
 <!-- History -->
