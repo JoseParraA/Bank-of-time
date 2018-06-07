@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<!-- 
+<!--
 <table>
   <thead>
     <tr>
@@ -36,30 +36,30 @@
 </table> -->
 
 
-<div class="container latest">
-  <div class="row">
-    <div class="col-xs-12 ">
-      <h1>Users Profiles</h1>
-    </div>
-  <% @users.each do |user| %>
-    <a href="<%= users_path %>"> <%# 3 ways product || product_path product.id %>
-      <div class="col-xs-12 col-md-4 wrap-users wrap">
-        <figure>
-          <% if user.image.present? %>
-              <img src="<%=user.image%>" class="img-profile img-rounded" />
-              <%# To get the image I created a method in product.rb in the model so we can use everywhere in products view, contorller and model  %>
-          <% else %>
-          <img class="img-profile img-responsive" src="http://www.fillmurray.com/300/300" alt="" />
-          <% end %>
-        </figure>
-        <div class="wrap-text">
-          <h3><%= link_to user.name, user %></h3>
-          <%= user.skill %><br>
-        </div><!-- end text-container -->
-      </div><!-- end wrap-products -->
-    </a><!-- end link -->
+  <div class="container latest">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <h1>Users Profiles</h1>
+      </div>
+      <% @users.each do |user| %>
+        <a href="<%= users_path %>"> <%# 3 ways product || product_path product.id %>
+          <div class="col-xs-12 col-md-4 wrap-users wrap">
+            <figure>
+              <% if user.image.present? %>
+                <img src="<%=user.image%>" class="img-profile img-rounded" />
+                <%# To get the image I created a method in product.rb in the model so we can use everywhere in products view, contorller and model  %>
+              <% else %>
+                <img class="img-profile img-responsive" src="https://museum.wales/media/40374/thumb_480/empty-profile-grey.jpg" alt="" />
+              <% end %>
+            </figure>
+            <div class="wrap-text">
+              <h3><%= link_to user.name, user %></h3>
+              <%= user.skill %><br>
+            </div><!-- end text-container -->
+          </div><!-- end wrap-products -->
+        </a><!-- end link -->
       <% end %>
-  </div><!-- end row -->
-</div><!-- end container -->
+    </div><!-- end row -->
+  </div><!-- end container -->
 
 <!-- <%= link_to 'New User', new_user_path %> -->
