@@ -25,3 +25,9 @@ This project is part of the Web Developer immersive in General Assembly in Sydne
 
 
 ## Approach
+
+## License & Copyright
+
+Copyright (c) 2018 Jose Juan Parra Alcolea
+
+Licensed under [MIT License](LICENSE).
