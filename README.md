@@ -34,6 +34,13 @@ This project is part of the Web Developer immersive in General Assembly in Sydne
 
 ## TODO
 
+* Improve Geolocation
+* Add a live chat
+* Improve design
+* Deploy on Cloudinary
+* Improve privacy
+* Welcome Email
+* Email confirm transaction
 
 
 ## License & Copyright
