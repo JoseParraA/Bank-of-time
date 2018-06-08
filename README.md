@@ -1,7 +1,7 @@
 # Bank of Time
-![](app/assets/images/home.png)
-<img style="border-width: 2px solid black;" src="app/assets/images/home.png" >
-
+<img src="app/assets/images/home.png">
+<img src="app/assets/images/Profile1.png">
+<img src="app/assets/images/Profile2.png">
 <https://bank-of-time.herokuapp.com/>
 
 ## Motivation
