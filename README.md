@@ -1,5 +1,9 @@
 # Bank of Time
+
+## Home
 <img src="app/assets/images/home.png">
+
+## Profile page
 <img src="app/assets/images/Profile1.png">
 <img src="app/assets/images/Profile2.png">
 <https://bank-of-time.herokuapp.com/>
