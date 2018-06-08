@@ -1,5 +1,6 @@
 # Bank of Time
 ![](app/assets/images/home.png)
+<img src="app/assets/images/home.png">
 
 <https://bank-of-time.herokuapp.com/>
 
