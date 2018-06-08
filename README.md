@@ -1,5 +1,5 @@
 # Bank of Time
-![](app/assets/images/ScreenShot2018-05-31at8.20.20amcopy.png)
+![](app/assets/images/home.png)
 
 <https://bank-of-time.herokuapp.com/>
 
