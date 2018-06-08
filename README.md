@@ -1,4 +1,5 @@
 # Bank of Time
+![Alt text](app/assets/images/Screen Shot 2018-05-31 at 8.20.20 am copy.png "Optional Title")
 
 <https://bank-of-time.herokuapp.com/>
 
@@ -25,6 +26,10 @@ This project is part of the Web Developer immersive in General Assembly in Sydne
 
 
 ## Approach
+
+## TODO
+
+
 
 ## License & Copyright
 
