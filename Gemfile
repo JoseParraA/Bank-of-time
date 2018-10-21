@@ -51,6 +51,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rails-pry'
   gem 'annotate'
+  gem "sprockets", ">= 3.7.2"
 
 end
 
